@@ -1,198 +1,113 @@
-/*************************************************************************
- * Enhanced Custom CSS for Aesthetic and Responsive Improvements
- *************************************************************************/
+<!doctype html>
+<html lang="en">
 
-/* General Content Styling */
-.content-table > div:first-child > div:first-child > h2:first-child {
-  margin-top: 0;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 10px;
-}
+<head>
+  <title>Jose Quintana</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+</head>
 
-/* Profile Image Styling */
-#me {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  margin: 20px auto;
-}
+<body>
+  <!-- Menu -->
+  <div class="menu-container"></div>
 
-/* Flex Item Adjustments */
-.flex-item-stretch-6 {
-  flex: 1 1 auto;
-}
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <img id="me" src="img/me.jpg" alt="Jose Quintana" class="profile-picture">
+      <h1 class="center-text">Jose Daniel Quintana Fuentes</h1>
+      <p class="center-text">
+        <strong>Graduate Student in Electrical Engineering</strong><br>
+        jose.quintana@utp.edu.co<br>
+        <a href="https://university.edu/electrical-engineering" target="_blank">Department of Electrical Engineering</a><br>
+        <a href="https://university.edu" target="_blank">Technological University of Pereira</a><br>
+        <a href="https://orcid.org/0000-1234-5678-9101" target="_blank">ORCID: 0000-1234-5678-9101</a><br>
+        <a href="https://github.com/JoseQuintana20" target="_blank">GitHub: JoseQuintana20</a>
+      </p>
+    </div>
+  </div>
 
-/* Maximum Width for Content */
-.max-width-600 {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+  <!-- About Me Section -->
+  <div class="content-container">
+    <div class="content">
+      <h2>About Me</h2>
+      <hr>
+      <p>
+        I am an electronics engineer and master’s student specializing in integrating artificial intelligence, control systems, and innovative technologies. My expertise lies in UAVs, IoT, and autonomous navigation. I have experience in multidisciplinary projects, prototyping, and research, aiming to contribute to technological advancement with impactful solutions.
+      </p>
 
-/* Typography Enhancements */
-h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #005cbf;
-}
+      <h3>Academic Background</h3>
+      <ul>
+        <li><strong>Electronics Engineering:</strong> Gained a solid foundation in electronics, programming, and embedded systems.</li>
+        <li><strong>Master’s in Electrical Engineering:</strong> Researching adaptive control and trajectory prediction for drones in complex environments.</li>
+      </ul>
 
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #333;
-}
+      <h3>Research Group</h3>
+      <p>
+        Member of the <strong>Automatic Control Research Group</strong> under Ph.D. Eduardo Giraldo, focusing on adaptive control, system identification, and optimal control for UAVs.
+      </p>
+    </div>
+  </div>
 
-p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
-}
+  <!-- Projects Section -->
+  <div class="content-container">
+    <div class="content">
+      <h2 id="projects">Projects</h2>
+      <hr>
+      <ul>
+        <li><strong>Adaptive Control for Autonomous Drones:</strong> LQR with real-time trajectory prediction for dynamic obstacle avoidance.</li>
+        <li><strong>IoT Project with ESP32:</strong> Remote monitoring using MQTT, Node-RED, and PostgreSQL integration.</li>
+        <li><strong>BattleBot WiFi Controller:</strong> Real-time control via a responsive web interface hosted on ESP32.</li>
+        <li><strong>Multi-Agent Motion Planning:</strong> Optimized movement in multi-agent robotic systems in dynamic environments.</li>
+      </ul>
+    </div>
+  </div>
 
-a {
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
+  <!-- Publications Section -->
+  <div class="content-container">
+    <div class="content">
+      <h2 id="publications">Publications</h2>
+      <hr>
+      <ol>
+        <li>
+          <strong>Quintana, J.,</strong> Co-Authors. (Year). “Title of the Publication.” <em>Journal Name</em>, Vol. (Issue), Pages. 
+          <a href="https://doi.org/example" target="_blank">DOI</a>
+        </li>
+        <li>
+          <strong>Quintana, J.,</strong> Co-Authors. (Year). “Another Research Article.” <em>Conference Proceedings</em>, Location. 
+          <a href="https://doi.org/example2" target="_blank">DOI</a>
+        </li>
+      </ol>
+    </div>
+  </div>
 
-a:hover {
-  color: #005cbf;
-  text-decoration: underline;
-}
+  <!-- Awards Section -->
+  <div class="content-container">
+    <div class="content">
+      <h2 id="awards">Awards & Honors</h2>
+      <hr>
+      <ul>
+        <li>Best Graduate Researcher Award – Technological University of Pereira (Year).</li>
+        <li>Innovation in Engineering Award – National Engineering Conference (Year).</li>
+      </ul>
+    </div>
+  </div>
 
-/* Button Enhancements */
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content center-text">
+      <p>Connect with me:</p>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/JoseQuintana20" target="_blank">GitHub</a> |
+      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+    </div>
+  </footer>
+</body>
 
-.button:hover {
-  background-color: #005cbf;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Table Styling */
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 1rem;
-  color: #333;
-}
-
-.table th,
-.table td {
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-.table th {
-  background-color: #007bff;
-  color: white;
-  font-weight: bold;
-}
-
-.table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Card Components */
-.card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 20px 0;
-}
-
-.card h3 {
-  margin-top: 0;
-}
-
-.card p {
-  margin-bottom: 0;
-}
-
-/* Responsive Design */
-@media screen and (min-width: 900px) {
-  .flex-item-stretch-6 {
-    flex: 5.5;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .content-table {
-    padding: 20px;
-  }
-
-  #me {
-    width: 150px;
-    height: 150px;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .content-table {
-    padding: 15px;
-  }
-
-  #me {
-    width: 120px;
-    height: 120px;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  p {
-    font-size: 0.9rem;
-  }
-
-  .button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-}
-
-/* Section Spacing */
-.section {
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Highlighted Text */
-.highlight {
-  color: #dc3545;
-  font-weight: bold;
-}
+</html>
