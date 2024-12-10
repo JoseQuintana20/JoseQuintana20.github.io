@@ -1,125 +1,101 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Jose Quintana</title>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jose Quintana - Portfolio</title>
+  <link href="css/frame.css" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/menu.js"></script>
+  <script src="js/menu.js" defer></script>
 </head>
 
 <body>
-  <div class="menu-container"></div>
-  <div class="content-container">
-    <div class="content">
-      <div class="content-table flex-column">
-        <!-- Información Personal -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <img class="image" id="me" src="img/me.jpg" alt="Foto de perfil">
-          </div>
-          <div class="flex-item flex-column">
-            <h2>Jose Daniel Quintana Fuentes</h2>
-            <p class="text">
-              <!-- Título y datos de contacto -->
-              <strong>Estudiante de Maestría en Ingeniería Eléctrica</strong><br>
-              jose.quintana@utp.edu.co<br>
-              <a href="https://university.edu/electrical-engineering" target="_blank">Departamento de Ingeniería Eléctrica</a><br>
-              <a href="https://university.edu" target="_blank">Universidad Tecnología de Pereira</a><br>
-              <a href="https://orcid.org/0000-1234-5678-9101" target="_blank">
-                  <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
-                  https://orcid.org/0000-1234-5678-9101
-              </a><br>
-              <a href="https://github.com/JoseQuintana20" target="_blank">GitHub: JoseQuintana20</a>
-            </p>
-          </div>
-        </div>
+  <!-- Navigation -->
+  <header class="menu-container"></header>
 
-        <!-- Biografía -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2>Biografía</h2>
-            <hr>
-            <p class="text">
-                Soy ingeniero electrónico y actualmente curso una maestría en ingeniería eléctrica. Mi pasión radica en el diseño de sistemas avanzados de control, con un interés particular en vehículos aéreos no tripulados (UAVs) y aplicaciones de inteligencia artificial. Actualmente, mis investigaciones están enfocadas en el control adaptativo, métodos de predicción de trayectorias, y la integración de visión por computador para navegación autónoma en entornos complejos.
-            </p>
-          </div>
-        </div>
-
-        <!-- Publicaciones y Proyectos -->
-        <div class="flex-row">
-          <h3>Tabla de Contenidos</h3>
-          <ul>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#publicaciones">Publicaciones</a></li>
-            <li><a href="#premios">Premios y Honores</a></li>
-          </ul>
-        </div>
-
-        <!-- Ejemplo de Sección de Proyectos -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="proyectos">Proyectos</h2>
-            <hr>
-            <p class="text">
-                <span class="highlight-text">Control Adaptativo para Drones Autónomos</span><br>
-                Desarrollo de un controlador adaptativo LQR con predicción en tiempo real para evasión de obstáculos en UAVs. Este proyecto utiliza filtros de Kalman y modelos dinámicos para garantizar la navegación segura y eficiente en entornos dinámicos.
-            </p>
-            <p class="text">
-              <span class="highlight-text">Implementación...</span><br>
-              Desarrollo e integración de sistemas de monitoreo y control en ....
-            </p>
-          </div>
-        </div>
-
-        <!-- Ejemplo de Sección de Publicaciones -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="publicaciones">Publicaciones</h2>
-            <hr>
-            <ol class="publication J-list">
-              <li>
-                <p class="text-small-margin">
-                  <b>Nombre Completo</b>, Co-Autor 1, Co-Autor 2. (Año). "Título de la Publicación". Revista Científica, Volumen(Número), Páginas. 
-                  <br>
-                  <a href="https://doi.org/doi" target="_blank">DOI</a>
-                </p>
-              </li>
-              <!-- Añadir más publicaciones aquí -->
-            </ol>
-          </div>
-        </div>
-
-        <!-- Ejemplo de Sección de Premios -->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="premios">Premios y Honores</h2>
-            <hr>
-            <ol class="publication A-list">
-              <li>
-                <p class="text-small-margin">
-                  Premio.... Año. Universidad Ejemplo.
-                </p>
-              </li>
-              <li>
-                <p class="text-small-margin">
-                  Reconocimiento por .... Año. Organización o Conferencia Ejemplo.
-                </p>
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        <!-- Final del Contenido -->
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content flex-row-center">
+      <img id="me" src="img/me.jpg" alt="Jose Quintana's Profile Picture">
+      <div class="hero-text">
+        <h1>Jose Daniel Quintana Fuentes</h1>
+        <p>
+          <strong>Master's Student in Electrical Engineering</strong><br>
+          <a href="mailto:jose.quintana@utp.edu.co">jose.quintana@utp.edu.co</a><br>
+          <a href="https://orcid.org/0000-1234-5678-9101" target="_blank">
+            <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16"> ORCID
+          </a>
+        </p>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <section class="bio">
+      <h2>About Me</h2>
+      <p>
+        I am an electronic engineer currently pursuing a master's degree in electrical engineering. My passion lies in designing advanced control systems, with a particular interest in unmanned aerial vehicles (UAVs) and artificial intelligence applications. My research focuses on adaptive control, trajectory prediction methods, and integrating computer vision for autonomous navigation in complex environments.
+      </p>
+    </section>
+
+    <section class="projects" id="proyectos">
+      <h2>Projects</h2>
+      <hr>
+      <article>
+        <h3>Adaptive Control for Autonomous Drones</h3>
+        <p>
+          Development of an adaptive LQR controller with real-time prediction for obstacle avoidance in UAVs. This project uses Kalman filters and dynamic models to ensure safe and efficient navigation in dynamic environments.
+        </p>
+      </article>
+      <article>
+        <h3>Implementation of Monitoring Systems</h3>
+        <p>
+          Designed and integrated systems for real-time monitoring and control of industrial processes, focusing on precision and scalability.
+        </p>
+      </article>
+    </section>
+
+    <section class="publications" id="publicaciones">
+      <h2>Publications</h2>
+      <hr>
+      <ol>
+        <li>
+          <p>
+            <strong>Jose Quintana</strong>, Co-Author 1, Co-Author 2. (Year). "Title of the Publication". 
+            <em>Journal Name</em>, Volume(Number), Pages. 
+            <a href="https://doi.org/doi" target="_blank">DOI</a>
+          </p>
+        </li>
+        <!-- Add more publications as needed -->
+      </ol>
+    </section>
+
+    <section class="awards" id="premios">
+      <h2>Awards and Honors</h2>
+      <hr>
+      <ul>
+        <li>Excellence Award in Engineering, 2023 - University Example.</li>
+        <li>Best Paper Award, 2022 - Conference Example.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Jose Quintana. All Rights Reserved.</p>
+      <ul class="social-links">
+        <li><a href="https://github.com/JoseQuintana20" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/tu-linkedin" target="_blank">LinkedIn</a></li>
+        <li><a href="https://twitter.com/tu-twitter" target="_blank">Twitter</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 
 </html>
