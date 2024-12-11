@@ -2,129 +2,127 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jose Quintana - Portfolio</title>
-  <link href="css/frame.css" rel="stylesheet" type="text/css" />
-  <link href="css/controls.css" rel="stylesheet" type="text/css" />
-  <link href="css/custom.css" rel="stylesheet" type="text/css" />
+  <title>Jose Quintana</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/menu.js" defer></script>
+  <script src="js/menu.js"></script>
 </head>
 
 <body>
-  <!-- Navigation -->
-  <header class="menu-container"></header>
+  <!-- Menu -->
+  <div class="menu-container"></div>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content flex-row-center">
-      <img id="me" src="img/me.jpg" alt="Jose Quintana's Profile Picture">
-      <div class="hero-text">
-        <h1>Jose Daniel Quintana Fuentes</h1>
-        <p>
-          <strong>Master's Student in Electrical Engineering</strong><br>
-          <a href="mailto:jose.quintana@utp.edu.co">jose.quintana@utp.edu.co</a><br>
-          <a href="https://orcid.org/0000-1234-5678-9101" target="_blank">
-            <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16"> ORCID
-          </a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <main>
-    <!-- About Me Section -->
-    <section class="about">
-      <h2>About Me</h2>
-      <p>
-        I am an electronic engineer and a master’s student specializing in advanced control systems and autonomous navigation technologies. My passion is integrating AI and IoT to create innovative solutions for UAVs and other complex systems. Through academic and professional experiences, I have developed strong skills in research, prototype development, and multidisciplinary project management.
+  <div class="hero-section">
+    <div class="hero-content">
+      <img id="me" src="img/me.jpg" alt="Jose Quintana" class="profile-picture">
+      <h1 class="center-text">Jose Daniel Quintana Fuentes</h1>
+      <p class="center-text">
+        <strong>Graduate Student in Electrical Engineering</strong><br>
+        jose.quintana@utp.edu.co<br>
+        <a href="https://university.edu/electrical-engineering" target="_blank">Department of Electrical Engineering</a><br>
+        <a href="https://university.edu" target="_blank">Technological University of Pereira</a><br>
+        <a href="https://orcid.org/0000-1234-5678-9101" target="_blank">ORCID: 0000-1234-5678-9101</a><br>
+        <a href="https://github.com/JoseQuintana20" target="_blank">GitHub: JoseQuintana20</a>
       </p>
-    </section>
+    </div>
+  </div>
 
-    <!-- Academic Background Section -->
-    <section class="academic">
-      <h2>Academic Background</h2>
+  <!-- About Me Section -->
+  <div class="content-container">
+    <div class="content">
+      <h2>About Me</h2>
+      <hr>
+      <p>
+        I am an electronics engineer and master’s student specializing in integrating artificial intelligence, control systems, and innovative technologies. My expertise lies in UAVs, IoT, and autonomous navigation. I have experience in multidisciplinary projects, prototyping, and research, aiming to contribute to technological advancement with impactful solutions.
+      </p>
+
+      <h3>Academic Background</h3>
       <ul>
-        <li><strong>Electronics Engineering:</strong> Built a strong foundation in electronics, programming, and embedded systems during my undergraduate studies.</li>
-        <li><strong>Master’s in Electrical Engineering:</strong> Focusing on autonomous vehicles and IoT, with research in system identification, state estimation, and control systems for drones navigating complex environments.</li>
+        <li><strong>Electronics Engineering:</strong> Gained a solid foundation in electronics, programming, and embedded systems.</li>
+        <li><strong>Master’s in Electrical Engineering:</strong> Researching adaptive control and trajectory prediction for drones in complex environments.</li>
       </ul>
-    </section>
 
-    <!-- Experience Section -->
-    <section class="experience">
-      <h2>Experience</h2>
+      <h3>Research Group</h3>
+      <p>
+        Member of the <strong>Automatic Control Research Group</strong> under Ph.D. Eduardo Giraldo, focusing on adaptive control, system identification, and optimal control for UAVs.
+      </p>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <div class="content-container">
+    <div class="content">
+      <h2 id="projects">Projects</h2>
+      <hr>
       <ul>
-        <li><strong>IoT and AI Development:</strong> Created natural language processing chatbots and predictive models for real estate management.</li>
-        <li><strong>Research in UAVs:</strong> Developed trajectory tracking algorithms, integrated 3D mapping systems, and addressed adaptive control challenges for autonomous drones.</li>
-        <li><strong>Data Science Applications:</strong> Conducted exploratory data analysis and applied machine learning techniques for academic projects.</li>
-        <li><strong>Research Groups:</strong> Active member of the <strong>Automatic Control Research Group</strong>, focusing on adaptive and optimal control, state estimation, and system identification.</li>
+        <li><strong>Hand Detection and Finger Counting:</strong> Developed using Python, OpenCV, and MediaPipe.</li>
+        <li><strong>IoT Project with ESP32:</strong> Remote monitoring using MQTT, Node-RED, and PostgreSQL integration.</li>
+        <li><strong>BattleBot WiFi Controller:</strong> Real-time control via a responsive web interface hosted on ESP32.</li>
+        <li><strong>Multi-Agent Motion Planning:</strong> Optimized movement in multi-agent robotic systems in dynamic environments.</li>
+        <li><strong>Image Recognition with Deep Neural Networks:</strong> Using MATLAB’s Deep Network Designer.</li>
+        <li><strong>Audio Signal Processing:</strong> Analysis and filtering of audio signals in MATLAB.</li>
+        <li><strong>Facial and Voice Recognition:</strong> Combined OpenCV and Python for facial recognition and Google’s API for voice recognition.</li>
       </ul>
-    </section>
+    </div>
+  </div>
 
-    <!-- Projects Section -->
-    <section class="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Adaptive Control for Autonomous Drones</h3>
-        <p>
-          Developed an adaptive LQR controller with real-time obstacle avoidance for UAVs, leveraging Kalman filters and dynamic models for safe navigation.
-        </p>
-      </div>
-      <div class="project">
-        <h3>IoT Project with ESP32</h3>
-        <p>
-          Designed an IoT system using ESP32 for LED control, MQTT communication, Node-RED integration, Telegram monitoring, and PostgreSQL data storage.
-        </p>
-      </div>
-      <div class="project">
-        <h3>Graph Optimization</h3>
-        <p>
-          Proposed network optimization strategies for minimizing measurement stations in a gas pipeline network using graph algorithms.
-        </p>
-      </div>
-      <div class="project">
-        <h3>Multi-Agent Motion Planning</h3>
-        <p>
-          Planned robotic motion for multiple agents in obstacle-filled environments, optimizing movements and minimizing travel distances.
-        </p>
-      </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section class="publications">
-      <h2>Publications</h2>
+  <!-- Publications Section -->
+  <div class="content-container">
+    <div class="content">
+      <h2 id="publications">Publications</h2>
+      <hr>
       <ol>
         <li>
-          <strong>Jose Quintana</strong>, Co-Author 1, Co-Author 2. (Year). "Title of the Publication". 
-          <em>Journal Name</em>, Volume(Number), Pages. 
-          <a href="https://doi.org/doi" target="_blank">DOI</a>
+          <strong>Quintana, J.,</strong> Co-Authors. (Year). “Title of the Publication.” <em>Journal Name</em>, Vol. (Issue), Pages. 
+          <a href="https://doi.org/example" target="_blank">DOI</a>
         </li>
-        <!-- Additional publications can be added here -->
+        <li>
+          <strong>Quintana, J.,</strong> Co-Authors. (Year). “Another Research Article.” <em>Conference Proceedings</em>, Location. 
+          <a href="https://doi.org/example2" target="_blank">DOI</a>
+        </li>
       </ol>
-    </section>
+    </div>
+  </div>
 
-    <!-- Awards Section -->
-    <section class="awards">
-      <h2>Awards and Honors</h2>
+  <!-- Awards Section -->
+  <div class="content-container">
+    <div class="content">
+      <h2 id="awards">Awards & Honors</h2>
+      <hr>
       <ul>
-        <li>Excellence Award in Engineering, 2023 - University Example.</li>
-        <li>Best Paper Award, 2022 - Conference Example.</li>
+        <li>Best Graduate Researcher Award – Technological University of Pereira (Year).</li>
+        <li>Innovation in Engineering Award – National Engineering Conference (Year).</li>
       </ul>
-    </section>
-  </main>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="content-container">
+    <div class="content">
+      <h2>Technical Skills</h2>
+      <hr>
+      <ul>
+        <li><strong>Programming:</strong> Proficient in Python, C++, Java, JavaScript, R, and MicroPython.</li>
+        <li><strong>Tools:</strong> Skilled in MATLAB, Simulink, Git, AWS, and 3D design tools.</li>
+        <li><strong>Database Management:</strong> Experience with MariaDB and MySQL.</li>
+        <li><strong>Specializations:</strong> Robotics, adaptive control, trajectory prediction, and autonomous navigation.</li>
+      </ul>
+    </div>
+  </div>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2024 Jose Quintana. All Rights Reserved.</p>
-      <ul class="social-links">
-        <li><a href="https://github.com/JoseQuintana20" target="_blank">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/tu-linkedin" target="_blank">LinkedIn</a></li>
-        <li><a href="https://twitter.com/tu-twitter" target="_blank">Twitter</a></li>
-      </ul>
+  <footer class="footer">
+    <div class="footer-content center-text">
+      <p>Connect with me:</p>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/JoseQuintana20" target="_blank">GitHub</a> |
+      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
     </div>
   </footer>
 </body>
