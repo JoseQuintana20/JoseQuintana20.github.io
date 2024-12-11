@@ -30,27 +30,34 @@
     });
   </script>
   <script>
-    function toggleTheme() {
-      const body = document.body;
-      body.classList.toggle('light-mode');
-  
-      // Guarda la preferencia del usuario en localStorage
-      const isLightMode = body.classList.contains('light-mode');
-      localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
-    }
-  
-    // Función para alternar el menú en pantallas pequeñas
     function toggleMenu() {
       const menu = document.querySelector('.menu-items');
+      const menuToggle = document.querySelector('.menu-toggle');
       menu.classList.toggle('active');
+  
+      // Actualizar el estado aria-expanded
+      const isActive = menu.classList.contains('active');
+      menuToggle.setAttribute('aria-expanded', isActive);
     }
   
-    // Aplica el tema almacenado en localStorage al cargar la página
+    // Cerrar el menú al hacer clic en un enlace
     document.addEventListener('DOMContentLoaded', () => {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme === 'light') {
         document.body.classList.add('light-mode');
       }
+  
+      const menuLinks = document.querySelectorAll('.menu-items a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          const menu = document.querySelector('.menu-items');
+          const menuToggle = document.querySelector('.menu-toggle');
+          if (menu.classList.contains('active')) {
+            menu.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', false);
+          }
+        });
+      });
     });
   </script>
 </head>
