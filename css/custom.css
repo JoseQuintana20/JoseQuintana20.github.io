@@ -8,6 +8,7 @@ body {
   background-color: #1f1f1f;
   color: #eaeaea;
   transition: background-color 0.3s ease, color 0.3s ease;
+  padding-top: 70px; /* Agrega padding-top igual a la altura del encabezado */
 }
 
 /* Header and Logo */
@@ -253,6 +254,7 @@ h1:hover {
   padding: 0;
   margin: 20px auto;
 }
+
 
 .footer-social-icons .social-icons li a {
   font-size: 1.5rem;
