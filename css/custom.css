@@ -37,13 +37,16 @@ body {
 .logo {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
 }
 
-.logo-image {
-  height: 50px; /* Asegura una altura consistente */
-  width: auto; /* Mantiene las proporciones originales */
-  margin-right: 20px; /* Espaciado entre logo y menú */
+.logo img {
+  height: 50px; /* Ajusta la altura del logo */
+  width: auto; /* Mantén las proporciones */
+  max-width: 100px; /* Establece un límite para evitar que sea demasiado grande */
 }
+
 
 /* Navigation Menu */
 .menu-items {
