@@ -156,27 +156,27 @@ h1 {
 
 /* Theme Toggle Button */
 .theme-toggle {
-  position: fixed; /* Mantiene el botón siempre visible */
-  bottom: 20px; /* Espacio desde la parte inferior */
-  right: 20px; /* Espacio desde la parte derecha */
-  z-index: 1001; /* Asegura que esté visible */
-  background-color: #4dabf7; /* Fondo inicial */
+  position: fixed; /* Fija el botón en la pantalla */
+  bottom: 20px; /* A 20px de la parte inferior */
+  right: 20px; /* A 20px del borde derecho */
+  z-index: 1001; /* Asegura que esté sobre otros elementos */
+  background-color: #4dabf7; /* Fondo del botón */
   color: #fff; /* Color del ícono */
   border: none; /* Sin bordes */
   border-radius: 50%; /* Forma redonda */
   width: 50px; /* Tamaño del botón */
   height: 50px; /* Tamaño del botón */
-  cursor: pointer; /* Cursor cambia al pasar */
+  cursor: pointer; /* Cambia el cursor al pasar */
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para mejor visibilidad */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .theme-toggle:hover {
-  background-color: #005cbf; /* Cambio al pasar el cursor */
-  transform: scale(1.1); /* Efecto de ampliación */
+  background-color: #005cbf; /* Cambio de color al pasar el cursor */
+  transform: scale(1.1); /* Ampliación */
 }
 
 /* Light Mode */
