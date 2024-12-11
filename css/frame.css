@@ -130,14 +130,15 @@ hr {
 }
 
 .menu-button {
-  position: fixed; /* Mantiene el botón siempre visible */
-  top: 20px; /* Ajustar la distancia desde la parte superior */
-  left: 30x; /* Moverlo hacia la izquierda */
+  display: none; /* Oculta el botón por defecto */
+  position: fixed;
+  top: 20px; /* Ajusta la distancia desde la parte superior */
+  left: 10px; /* Ajusta la distancia desde el lado izquierdo */
   z-index: 1001; /* Asegura que esté por encima de otros elementos */
   background-color: transparent; /* Fondo transparente */
   border: none; /* Sin bordes */
-  cursor: pointer; /* Cambia el cursor cuando pasa el mouse */
-  font-size: 24px; /* Tamaño del icono */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  font-size: 24px; /* Tamaño del ícono */
   color: #eaeaea; /* Color del ícono */
 }
 
@@ -157,13 +158,6 @@ hr {
 
   .menu-button {
     display: block; /* Muestra el botón en pantallas pequeñas */
-    order: 1; /* Prioriza el botón a la izquierda */
-    margin-right: 10px; /* Espaciado entre el botón y el logo */
-    background-color: transparent; /* Fondo transparente */
-    border: none; /* Sin bordes */
-    cursor: pointer;
-    font-size: 24px; /* Tamaño del ícono */
-    color: #eaeaea; /* Color del botón */
   }
 
   .menu .logo {
@@ -173,17 +167,18 @@ hr {
 
   .menu-items {
     display: none; /* Oculta el menú por defecto */
-    flex-direction: column; /* Menú desplegable vertical */
-    position: absolute;
-    top: 60px; /* Ajusta posición debajo del header */
+    flex-direction: column; /* Alinea los elementos del menú en columna */
+    position: absolute; /* Posiciona el menú relativo al botón */
+    top: 70px; /* Justo debajo del header */
     left: 0;
-    width: 100%; /* Ocupa el ancho completo */
-    background-color: #343a40;
-    z-index: 1000; /* Por encima de otros elementos */
+    width: 100%; /* Ancho completo */
+    background: #343a40; /* Fondo oscuro para el menú desplegable */
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .menu-items.active {
-    display: flex; /* Muestra el menú desplegable al activarlo */
+    display: flex; /* Muestra el menú desplegable cuando está activo */
   }
 
   .menu-items a {
