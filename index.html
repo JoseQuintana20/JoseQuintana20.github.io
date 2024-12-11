@@ -14,120 +14,118 @@
 </head>
 
 <body>
-  <!-- Menu -->
-  <div class="menu-container"></div>
+  <div class="container">
+    <!-- Header Section -->
+    <header>
+      <div class="header-content">
+        <img src="img/logo.png" alt="Site Logo" class="logo">
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <!-- Hero Section -->
-  <div class="hero-section">
-    <div class="hero-content">
-      <img id="me" src="img/me.jpg" alt="Jose Quintana" class="profile-picture">
-      <h1>Jose Daniel Quintana Fuentes</h1>
-      <p>
-        <strong>Graduate Student in Electrical Engineering</strong><br>
-        jose.quintana@utp.edu.co<br>
-        <a href="https://university.edu/electrical-engineering" target="_blank">Department of Electrical Engineering</a><br>
-        <a href="https://university.edu" target="_blank">Technological University of Pereira</a><br>
-        <a href="https://orcid.org/0000-1234-5678-9101" target="_blank">ORCID: 0000-1234-5678-9101</a><br>
-        <a href="https://github.com/JoseQuintana20" target="_blank">GitHub: JoseQuintana20</a>
-      </p>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="img/me.jpg" alt="Jose Quintana" class="profile-img">
+        <h1>Jose Daniel Quintana Fuentes</h1>
+        <p class="hero-subtitle">Graduate Student in Electrical Engineering</p>
+        <ul class="social-icons">
+          <li><a href="https://twitter.com/yourhandle"><img src="img/twitter-icon.png" alt="Twitter"></a></li>
+          <li><a href="https://linkedin.com/in/yourprofile"><img src="img/linkedin-icon.png" alt="LinkedIn"></a></li>
+          <li><a href="https://github.com/JoseQuintana20"><img src="img/github-icon.png" alt="GitHub"></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="content-container">
+      <div class="content">
+        <h2>About Me</h2>
+        <hr>
+        <p>
+          I am an electronics engineer and master’s student specializing in integrating artificial intelligence, control systems, and innovative technologies. My expertise lies in UAVs, IoT, and autonomous navigation. I have experience in multidisciplinary projects, prototyping, and research, aiming to contribute to technological advancement with impactful solutions.
+        </p>
+        <h3>Academic Background</h3>
+        <ul>
+          <li><strong>Electronics Engineering:</strong> Gained a solid foundation in electronics, programming, and embedded systems.</li>
+          <li><strong>Master’s in Electrical Engineering:</strong> Researching adaptive control and trajectory prediction for drones in complex environments.</li>
+        </ul>
+        <h3>Research Group</h3>
+        <p>
+          Member of the <strong>Automatic Control Research Group</strong> under Ph.D. Eduardo Giraldo, focusing on adaptive control, system identification, and optimal control for UAVs.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="content-container">
+      <div class="content">
+        <h2>Projects</h2>
+        <hr>
+        <ul>
+          <li><strong>Hand Detection and Finger Counting:</strong> Developed using Python, OpenCV, and MediaPipe.</li>
+          <li><strong>IoT Project with ESP32:</strong> Remote monitoring using MQTT, Node-RED, and PostgreSQL integration.</li>
+          <li><strong>BattleBot WiFi Controller:</strong> Real-time control via a responsive web interface hosted on ESP32.</li>
+          <li><strong>Multi-Agent Motion Planning:</strong> Optimized movement in multi-agent robotic systems in dynamic environments.</li>
+          <li><strong>Image Recognition with Deep Neural Networks:</strong> Using MATLAB’s Deep Network Designer.</li>
+          <li><strong>Audio Signal Processing:</strong> Analysis and filtering of audio signals in MATLAB.</li>
+          <li><strong>Facial and Voice Recognition:</strong> Combined OpenCV and Python for facial recognition and Google’s API for voice recognition.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="content-container">
+      <div class="content">
+        <h2>Publications</h2>
+        <hr>
+        <ol>
+          <li>
+            <strong>Quintana, J.,</strong> Co-Authors. (Year). “Title of the Publication.” <em>Journal Name</em>, Vol. (Issue), Pages. 
+            <a href="https://doi.org/example" target="_blank">DOI</a>
+          </li>
+          <li>
+            <strong>Quintana, J.,</strong> Co-Authors. (Year). “Another Research Article.” <em>Conference Proceedings</em>, Location. 
+            <a href="https://doi.org/example2" target="_blank">DOI</a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="content-container">
+      <div class="content">
+        <h2>Technical Skills</h2>
+        <hr>
+        <ul>
+          <li><strong>Programming:</strong> Proficient in Python, C++, Java, JavaScript, R, and MicroPython.</li>
+          <li><strong>Tools:</strong> Skilled in MATLAB, Simulink, Git, AWS, and 3D design tools.</li>
+          <li><strong>Database Management:</strong> Experience with MariaDB and MySQL.</li>
+          <li><strong>Specializations:</strong> Robotics, adaptive control, trajectory prediction, and autonomous navigation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Jose Quintana. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+          <a href="https://github.com/JoseQuintana20" target="_blank">GitHub</a>
+          <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+        </div>
+      </div>
+    </footer>
   </div>
-
-
-
-
-  <!-- About Me Section -->
-  <div class="content-container">
-    <div class="content">
-      <h2>About Me</h2>
-      <hr>
-      <p>
-        I am an electronics engineer and master’s student specializing in integrating artificial intelligence, control systems, and innovative technologies. My expertise lies in UAVs, IoT, and autonomous navigation. I have experience in multidisciplinary projects, prototyping, and research, aiming to contribute to technological advancement with impactful solutions.
-      </p>
-
-      <h3>Academic Background</h3>
-      <ul>
-        <li><strong>Electronics Engineering:</strong> Gained a solid foundation in electronics, programming, and embedded systems.</li>
-        <li><strong>Master’s in Electrical Engineering:</strong> Researching adaptive control and trajectory prediction for drones in complex environments.</li>
-      </ul>
-
-      <h3>Research Group</h3>
-      <p>
-        Member of the <strong>Automatic Control Research Group</strong> under Ph.D. Eduardo Giraldo, focusing on adaptive control, system identification, and optimal control for UAVs.
-      </p>
-    </div>
-  </div>
-
-  <!-- Projects Section -->
-  <div class="content-container">
-    <div class="content">
-      <h2 id="projects">Projects</h2>
-      <hr>
-      <ul>
-        <li><strong>Hand Detection and Finger Counting:</strong> Developed using Python, OpenCV, and MediaPipe.</li>
-        <li><strong>IoT Project with ESP32:</strong> Remote monitoring using MQTT, Node-RED, and PostgreSQL integration.</li>
-        <li><strong>BattleBot WiFi Controller:</strong> Real-time control via a responsive web interface hosted on ESP32.</li>
-        <li><strong>Multi-Agent Motion Planning:</strong> Optimized movement in multi-agent robotic systems in dynamic environments.</li>
-        <li><strong>Image Recognition with Deep Neural Networks:</strong> Using MATLAB’s Deep Network Designer.</li>
-        <li><strong>Audio Signal Processing:</strong> Analysis and filtering of audio signals in MATLAB.</li>
-        <li><strong>Facial and Voice Recognition:</strong> Combined OpenCV and Python for facial recognition and Google’s API for voice recognition.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Publications Section -->
-  <div class="content-container">
-    <div class="content">
-      <h2 id="publications">Publications</h2>
-      <hr>
-      <ol>
-        <li>
-          <strong>Quintana, J.,</strong> Co-Authors. (Year). “Title of the Publication.” <em>Journal Name</em>, Vol. (Issue), Pages. 
-          <a href="https://doi.org/example" target="_blank">DOI</a>
-        </li>
-        <li>
-          <strong>Quintana, J.,</strong> Co-Authors. (Year). “Another Research Article.” <em>Conference Proceedings</em>, Location. 
-          <a href="https://doi.org/example2" target="_blank">DOI</a>
-        </li>
-      </ol>
-    </div>
-  </div>
-
-  <!-- Awards Section -->
-  <div class="content-container">
-    <div class="content">
-      <h2 id="awards">Awards & Honors</h2>
-      <hr>
-      <ul>
-        <li>Best Graduate Researcher Award – Technological University of Pereira (Year).</li>
-        <li>Innovation in Engineering Award – National Engineering Conference (Year).</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Skills Section -->
-  <div class="content-container">
-    <div class="content">
-      <h2>Technical Skills</h2>
-      <hr>
-      <ul>
-        <li><strong>Programming:</strong> Proficient in Python, C++, Java, JavaScript, R, and MicroPython.</li>
-        <li><strong>Tools:</strong> Skilled in MATLAB, Simulink, Git, AWS, and 3D design tools.</li>
-        <li><strong>Database Management:</strong> Experience with MariaDB and MySQL.</li>
-        <li><strong>Specializations:</strong> Robotics, adaptive control, trajectory prediction, and autonomous navigation.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content center-text">
-      <p>Connect with me:</p>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/JoseQuintana20" target="_blank">GitHub</a> |
-      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
-    </div>
-  </footer>
 </body>
 
 </html>
