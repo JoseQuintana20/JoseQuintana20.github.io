@@ -158,25 +158,25 @@ h1 {
 
 /* Theme Toggle Button */
 .theme-toggle {
-  background-color: #4dabf7;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
+  position: fixed; /* Mantiene el botón siempre visible */
+  top: 20px; /* Mantén una distancia uniforme desde la parte superior */
+  right: 20px; /* Ajusta la distancia desde la derecha */
+  z-index: 1001; /* Asegura que esté visible */
+  background-color: #4dabf7; /* Color de fondo */
+  color: #fff; /* Color del ícono */
+  border: none; /* Sin bordes */
+  border-radius: 50%; /* Forma redonda */
+  width: 40px; /* Tamaño del botón */
+  height: 40px; /* Tamaño del botón */
+  cursor: pointer; /* Cambia el cursor al pasar */
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 1001;
   transition: background-color 0.3s ease;
 }
 
 .theme-toggle:hover {
-  background-color: #005cbf;
+  background-color: #005cbf; /* Cambia el color al pasar el cursor */
 }
 
 /* Light Mode */
