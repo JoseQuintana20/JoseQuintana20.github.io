@@ -2,15 +2,23 @@
 <html lang="en">
 
 <head>
-  <title>Jose Quintana</title>
   <meta charset="utf-8">
+  <title>Jose Quintana</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Carga de CSS -->
   <link href="css/frame.css" rel="stylesheet" type="text/css" />
   <link href="css/controls.css" rel="stylesheet" type="text/css" />
   <link href="css/custom.css" rel="stylesheet" type="text/css" />
+  
+  <!-- Font Awesome para íconos sociales -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+  <!-- Favicon -->
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  
+  <!-- Script para el Toggle de Tema -->
   <script>
     function toggleTheme() {
       const body = document.body;
@@ -37,10 +45,12 @@
     <div class="menu-container">
       <!-- Logo Section -->
       <div class="logo">
-        <img src="img/icon.png" alt="Logo" class="logo-image">
+        <a href="#">
+          <img src="img/icon.png" alt="Logo" class="logo-image">
+        </a>
       </div>
       <!-- Navigation Menu -->
-      <nav class="menu-items">
+      <nav class="menu-items" aria-label="Main Navigation">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
@@ -48,25 +58,31 @@
         <a href="#contact">Contact</a>
       </nav>
       <!-- Theme Toggle Button -->
-      <button class="theme-toggle" onclick="toggleTheme()">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
         <i class="fas fa-adjust"></i>
+      </button>
+      <!-- Botón de Menú para Dispositivos Móviles -->
+      <button class="menu-button" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
       </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src="img/me.jpg" alt="Jose Quintana" class="profile-img">
-      <h1>Jose Daniel Quintana Fuentes</h1>
-      <p class="hero-subtitle">Graduate Student in Electrical Engineering</p>
-      <ul class="social-icons">
-        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
-      </ul>
-    </div>
-  </section>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="img/me.jpg" alt="Jose Quintana" class="profile-img">
+        <h1>Jose Daniel Quintana Fuentes</h1>
+        <p class="hero-subtitle">Graduate Student in Electrical Engineering</p>
+        <ul class="social-icons">
+          <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+        </ul>
+      </div>
+    </section>
 
     <!-- About Me Section -->
     <section id="about" class="content-container">
