@@ -9,11 +9,19 @@
   <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/menu.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
 </head>
 
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()">
+    <i class="fas fa-adjust"></i>
+  </button>
+  
   <div class="container">
     <!-- Header Section -->
     <header>
@@ -38,9 +46,9 @@
         <h1>Jose Daniel Quintana Fuentes</h1>
         <p class="hero-subtitle">Graduate Student in Electrical Engineering</p>
         <ul class="social-icons">
-          <li><a href="https://twitter.com/yourhandle"><img src="img/twitter-icon.png" alt="Twitter"></a></li>
-          <li><a href="https://linkedin.com/in/yourprofile"><img src="img/linkedin-icon.png" alt="LinkedIn"></a></li>
-          <li><a href="https://github.com/JoseQuintana20"><img src="img/github-icon.png" alt="GitHub"></a></li>
+          <li><a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/JoseQuintana20" target="_blank"><i class="fab fa-github"></i></a></li>
         </ul>
       </div>
     </section>
@@ -118,10 +126,12 @@
     <footer class="footer">
       <div class="footer-content">
         <p>&copy; 2024 Jose Quintana. All Rights Reserved.</p>
-        <div class="social-links">
-          <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-          <a href="https://github.com/JoseQuintana20" target="_blank">GitHub</a>
-          <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+        <div class="footer-social-icons">
+          <ul class="social-icons">
+            <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/JoseQuintana20" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          </ul>
         </div>
       </div>
     </footer>
