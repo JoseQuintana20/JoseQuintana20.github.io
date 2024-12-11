@@ -80,14 +80,19 @@ hr {
   margin: 20px 0;
 }
 
-/* Menu Styling */
+/* Unificar estilos de .menu-container con custom.css */
 .menu-container {
-  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Alinear con custom.css */
+  background-color: #1f1f1f; /* Alinear color de fondo */
+  position: fixed; /* Cambiar a fixed */
   top: 0;
-  background-color: #343a40;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 15px 20px;
-  z-index: 10;
+  width: 100%;
+  z-index: 1000; /* Aumentar z-index para estar por encima de otros elementos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Alinear box-shadow */
+  height: 70px; /* Definir altura consistente */
 }
 
 .menu .menu-items a {
@@ -191,7 +196,6 @@ hr {
   }
 }
 
-
 .hero {
   display: flex;
   justify-content: center;
@@ -209,7 +213,6 @@ hr {
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Content Container */
 .content-container {
