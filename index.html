@@ -17,20 +17,12 @@
       const body = document.body;
       body.classList.toggle('light-mode');
   
+      // Guarda la preferencia del usuario en localStorage
       const isLightMode = body.classList.contains('light-mode');
-  
-      // Guarda la preferencia del tema en localStorage
       localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
-  
-      // Ajusta los estilos globales adicionales si es necesario
-      const allSections = document.querySelectorAll('.content-container, .hero-section, .footer');
-      allSections.forEach((section) => {
-        section.style.backgroundColor = isLightMode ? '#ffffff' : '#1f1f1f';
-        section.style.color = isLightMode ? '#333333' : '#eaeaea';
-      });
     }
   
-    // Aplica la preferencia de tema guardada
+    // Aplica el tema almacenado en localStorage al cargar la página
     document.addEventListener('DOMContentLoaded', () => {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme === 'light') {
@@ -38,6 +30,7 @@
       }
     });
   </script>
+
 
 </head>
 
