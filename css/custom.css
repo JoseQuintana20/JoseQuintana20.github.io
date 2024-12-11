@@ -13,14 +13,16 @@
 }
 
 /* Profile Image Styling */
-#me {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  margin: 20px auto;
+.profile-picture {
+  width: 150px; /* Adjust as necessary */
+  height: 150px; /* Make it a perfect square */
+  border-radius: 50%; /* This creates the circular effect */
+  border: 3px solid #333; /* Optional: Add a border */
+  object-fit: cover; /* Ensures the image fits nicely */
+  margin: 0 auto; /* Centers the image */
+  display: block; /* Centers the image as block element */
 }
+
 
 /* Flex Item Adjustments */
 .flex-item-stretch-6 {
