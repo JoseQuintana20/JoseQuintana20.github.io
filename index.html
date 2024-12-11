@@ -64,6 +64,7 @@
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
         <i class="fas fa-adjust"></i>
       </button>
+      
       <!-- Mobile Menu Button -->
       <button class="menu-button" aria-label="Toggle Menu">
         <i class="fas fa-bars"></i>
@@ -318,11 +319,11 @@
 
   <!-- Mobile Menu Script -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const menuButton = document.querySelector('.menu-button');
       const menuItems = document.querySelector('.menu-items');
-      
-      menuButton.addEventListener('click', function() {
+  
+      menuButton.addEventListener('click', function () {
         menuItems.classList.toggle('active');
       });
     });
