@@ -93,78 +93,74 @@ hr {
 
 /* Mobile Menu Button */
 .menu-button {
-  display: none; /* Ocultar por defecto */
-  position: absolute; /* Mantener para pantallas grandes */
-  top: 20px; /* Ajusta la distancia desde la parte superior */
-  right: 60px; /* Ajusta la posición desde la derecha para superponerlo ligeramente */
-  z-index: 1001; /* Asegura que esté sobre otros elementos */
-  background-color: transparent; /* Fondo transparente */
-  border: none; /* Sin bordes */
-  cursor: pointer; /* Cambia el cursor al pasar el mouse */
-  font-size: 24px; /* Tamaño del ícono */
-  color: #eaeaea; /* Color del ícono */
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  z-index: 1001;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #eaeaea;
 }
 
 .menu-button:hover {
-  color: #4dabf7; /* Cambia el color al pasar el cursor */
+  color: #4dabf7;
 }
 
 /* Responsive Menu */
 @media (max-width: 768px) {
-  /* Contenedor del Menú */
   .menu-container {
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center;     /* Centra los elementos verticalmente */
-    position: relative;      /* Permite posicionar el botón de menú de forma absoluta */
+    justify-content: center;
+    align-items: center;
+    position: relative;
     padding: 10px;
-    background-color: #1f1f1f; /* Asegura que el fondo siga siendo consistente */
-    height: 70px;              /* Mantiene la altura del encabezado */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el encabezado */
+    background-color: #1f1f1f;
+    height: 70px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  /* Botón de Menú */
   .menu-button {
-    display: block;            /* Hace visible el botón en pantallas pequeñas */
-    position: absolute;        /* Posiciona el botón de menú de forma absoluta */
-    right: 60px;               /* Alinea el botón cerca del borde derecho */
-    top: 50%;                  /* Centra verticalmente el botón */
-    transform: translateY(-50%); /* Ajusta la posición vertical */
-    z-index: 1001;             /* Asegura que el botón esté por encima de otros elementos */
-    background-color: transparent; /* Fondo transparente */
-    border: none;              /* Sin bordes */
-    cursor: pointer;           /* Cambia el cursor al pasar el mouse */
-    font-size: 24px;           /* Tamaño del ícono */
-    color: #eaeaea;            /* Color del ícono */
+    display: block;
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #eaeaea;
   }
 
   .menu-button:hover {
-    color: #4dabf7; /* Cambia el color al pasar el cursor */
+    color: #4dabf7;
   }
 
-  /* Logotipo Centrado */
   .menu .logo {
-    position: absolute;        /* Posiciona el logotipo de forma absoluta */
-    left: 50%;                 /* Mueve el logotipo al 50% del ancho del contenedor */
-    transform: translateX(-50%); /* Centra el logotipo horizontalmente */
-    text-align: center;        /* Alinea el texto del logotipo al centro */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
 
-  /* Elementos del Menú */
   .menu .menu-items {
-    display: none; /* Oculta el menú por defecto */
+    display: none;
     flex-direction: column;
     background: #343a40;
     width: 100%;
     position: absolute;
-    top: 70px;    /* Justo debajo del encabezado */
+    top: 70px;
     left: 0;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .menu .menu-items.active {
-    display: flex; /* Muestra el menú desplegable cuando está activo */
+    display: flex;
   }
 
   .menu-items a {
@@ -177,6 +173,20 @@ hr {
   .menu-items a:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
+}
+
+/* Light Mode Adjustments */
+body.light-mode .menu-container {
+  background-color: #ffffff;
+}
+
+body.light-mode .menu-items a {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+body.light-mode .menu-items a:hover {
+  color: #007bff;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Hero Section */
