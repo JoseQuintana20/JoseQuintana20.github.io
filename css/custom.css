@@ -276,9 +276,4 @@ body.light-mode .footer-social-icons li a:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .theme-toggle {
-    top: 10px;
-    right: 10px;
-  }
-}
+
