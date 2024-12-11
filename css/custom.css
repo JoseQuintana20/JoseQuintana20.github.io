@@ -1,5 +1,5 @@
 /* Enhanced Custom CSS for Aesthetic and Responsive Improvements */
-@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 /* General Content Styling */
 body {
@@ -8,12 +8,6 @@ body {
   background-color: #1f1f1f;
   color: #eaeaea;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-header::after {
-  content: '';
-  display: block;
-  height: 70px; /* Reservamos espacio para el encabezado */
 }
 
 /* Header and Logo */
@@ -31,10 +25,12 @@ header::after {
   height: 70px;
 }
 
+/* Asegura que el contenido principal no se oculte detrás del encabezado */
 main {
   padding-top: 70px; /* Altura del encabezado */
 }
 
+/* Logo Section */
 .logo {
   display: flex;
   align-items: center;
@@ -70,6 +66,43 @@ main {
 
 .menu-items a:hover {
   color: #4dabf7;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background-color: #4dabf7;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1001;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #005cbf;
+}
+
+/* Menu Toggle Button (Oculto por Defecto) */
+.menu-toggle {
+  display: none; /* Oculto en pantallas grandes */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle .menu-icon {
+  width: 30px; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
 }
 
 /* Hero Section */
@@ -161,29 +194,6 @@ h1 {
   color: #4dabf7;
 }
 
-/* Theme Toggle Button */
-.theme-toggle {
-  background-color: #4dabf7;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 1001;
-  transition: background-color 0.3s ease;
-}
-
-.theme-toggle:hover {
-  background-color: #005cbf;
-}
-
 /* Light Mode */
 body.light-mode {
   background-color: #f9f9f9;
@@ -235,28 +245,45 @@ body.light-mode .footer-social-icons li a:hover {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  /* Mostrar el botón del menú */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ocultar el menú de navegación por defecto */
   .menu-items {
     display: none;
     flex-direction: column;
     background-color: #1f1f1f;
     position: absolute;
-    top: 100%;
+    top: 70px; /* Debe coincidir con la altura del encabezado */
     right: 0;
-    padding: 10px 20px;
-    width: 200px;
+    width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
   }
 
+  /* Mostrar el menú cuando está activo */
   .menu-items.active {
     display: flex;
+    max-height: 500px; /* Ajusta según la cantidad de elementos */
+    opacity: 1;
   }
 
+  /* Estilo de los enlaces del menú en pantallas pequeñas */
   .menu-items a {
-    padding: 10px 0;
+    padding: 15px 20px;
+    border-bottom: 1px solid #333;
   }
-}
 
-@media screen and (max-width: 600px) {
+  .menu-items a:last-child {
+    border-bottom: none;
+  }
+
+  /* Ajustes para la Hero Section en pantallas pequeñas */
   .hero-section {
     padding: 40px 20px;
   }
@@ -273,4 +300,21 @@ body.light-mode .footer-social-icons li a:hover {
   .logo img {
     height: 40px;
   }
+}
+
+@media screen and (max-width: 600px) {
+  /* Puedes agregar estilos adicionales para pantallas aún más pequeñas si es necesario */
+}
+
+/* Transiciones Suaves para Menú Desplegable */
+.menu-items {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.menu-items.active {
+  max-height: 500px; /* Asegúrate de que este valor sea suficiente para el contenido */
+  opacity: 1;
 }
