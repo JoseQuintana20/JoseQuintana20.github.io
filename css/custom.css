@@ -31,7 +31,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra para mejorar visualización */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
 }
 
 .logo {
@@ -52,7 +52,8 @@ body {
 
 /* Navigation Menu */
 .menu-items {
-  margin-right: 50px; /* Asegurar que el menú no interfiera con el botón */
+  display: flex;
+  margin-right: 50px; /* Ensure spacing from button */
 }
 
 .menu-items a {
@@ -161,16 +162,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 10px; /* Ajustar separación del logo */
-  position: relative; /* Cambiar posición relativa para evitar superposición */
-  z-index: 2; /* Asegurar que esté encima, pero sin interferir */
+  margin-left: 10px; /* Adjust spacing from logo */
+  position: fixed; /* Ensure button stays visible */
+  top: 15px;
+  right: 15px;
+  z-index: 1000; /* Ensure button is on top */
   transition: background-color 0.3s ease;
 }
 
 .theme-toggle:hover {
   background-color: #005cbf;
 }
-
 
 /* Light Mode */
 body.light-mode {
@@ -198,6 +200,14 @@ body.light-mode .hero-section {
 
 body.light-mode .profile-img {
   border-color: #007bff;
+}
+
+body.light-mode .social-icons li a {
+  color: #333;
+}
+
+body.light-mode .social-icons li a:hover {
+  color: #007bff;
 }
 
 body.light-mode .footer {
