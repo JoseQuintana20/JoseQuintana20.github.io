@@ -25,7 +25,7 @@ body {
 .menu-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distribuye elementos hacia extremos */
+  justify-content: space-between; /* Distribuye elementos */
   padding: 10px 20px;
   background-color: #1f1f1f;
   position: fixed; /* Fija el encabezado */
@@ -33,10 +33,11 @@ body {
   width: 100%; /* Ocupa todo el ancho */
   z-index: 1000; /* Prioridad más alta */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 70px; /* Establece una altura fija del encabezado */
 }
 
 .container {
-  margin-top: 80px; /* Ajusta este valor para que el contenido no quede debajo del encabezado */
+  margin-top: 70px; /* Asegúrate que coincida con la altura del encabezado */
 }
 
 .logo {
