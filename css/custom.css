@@ -220,6 +220,36 @@ body.light-mode {
   color: #333;
 }
 
+body.light-mode .hero-section {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.light-mode .hero-section h1,
+body.light-mode .hero-section p {
+  color: #333;
+}
+
+body.light-mode .content-container {
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .footer {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.light-mode .menu-items a {
+  color: #333;
+}
+
+body.light-mode .menu-items a:hover {
+  color: #007bff;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .menu-items {
