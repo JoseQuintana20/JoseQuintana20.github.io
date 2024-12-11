@@ -96,7 +96,7 @@ hr {
   display: none; /* Ocultar por defecto */
   position: absolute; /* Mantener para pantallas grandes */
   top: 20px; /* Ajusta la distancia desde la parte superior */
-  left: 10px; /* Ajusta la distancia desde el lado izquierdo */
+  right: 60px; /* Ajusta la posición desde la derecha para superponerlo ligeramente */
   z-index: 1001; /* Asegura que esté sobre otros elementos */
   background-color: transparent; /* Fondo transparente */
   border: none; /* Sin bordes */
@@ -127,7 +127,7 @@ hr {
   .menu-button {
     display: block;            /* Hace visible el botón en pantallas pequeñas */
     position: absolute;        /* Posiciona el botón de menú de forma absoluta */
-    left: 20px;                /* Alinea el botón a la izquierda con un margen */
+    right: 60px;               /* Alinea el botón cerca del borde derecho */
     top: 50%;                  /* Centra verticalmente el botón */
     transform: translateY(-50%); /* Ajusta la posición vertical */
     z-index: 1001;             /* Asegura que el botón esté por encima de otros elementos */
