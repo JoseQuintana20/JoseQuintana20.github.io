@@ -1,5 +1,5 @@
 /* Enhanced Custom CSS for Aesthetic and Responsive Improvements */
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url(https://fonts.googleapis.com/css?family=Lato);
 
 /* General Content Styling */
 body {
@@ -25,12 +25,6 @@ body {
   height: 70px;
 }
 
-/* Asegura que el contenido principal no se oculte detrás del encabezado */
-main {
-  padding-top: 70px; /* Altura del encabezado */
-}
-
-/* Logo Section */
 .logo {
   display: flex;
   align-items: center;
@@ -68,50 +62,9 @@ main {
   color: #4dabf7;
 }
 
-/* Theme Toggle Button */
-.theme-toggle {
-  background-color: #4dabf7;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 1001;
-  transition: background-color 0.3s ease;
-}
-
-.theme-toggle:hover {
-  background-color: #005cbf;
-}
-
-/* Menu Toggle Button (Visible Only on Small Screens) */
-.menu-toggle {
-  display: none; /* Oculto en pantallas grandes */
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  position: fixed;
-  top: 15px;
-  right: 70px;
-  z-index: 1001;
-}
-
-.menu-toggle img {
-  width: 30px; /* Ajusta el tamaño del icono */
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.menu-toggle img:hover {
-  transform: scale(1.1);
+/* Contenedor principal */
+main {
+  padding-top: 70px; /* Altura del encabezado */
 }
 
 /* Hero Section */
@@ -121,7 +74,7 @@ main {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 100px 20px 60px; /* Ajuste de espacio para evitar superposición */
+  padding: 100px 20px 60px; /* Espaciado inferior adicional */
   background: linear-gradient(135deg, #1f1f1f 30%, #2a2a2a 100%);
   color: #eaeaea;
   transition: background 0.3s ease, color 0.3s ease;
@@ -203,6 +156,29 @@ h1 {
   color: #4dabf7;
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+  background-color: #4dabf7;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1001;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #005cbf;
+}
+
 /* Light Mode */
 body.light-mode {
   background-color: #f9f9f9;
@@ -254,40 +230,42 @@ body.light-mode .footer-social-icons li a:hover {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  /* Mostrar el botón del menú */
-  .menu-toggle {
-    display: block;
-  }
-
-  /* Ocultar el menú de navegación por defecto */
   .menu-items {
     display: none;
     flex-direction: column;
     background-color: #1f1f1f;
     position: absolute;
-    top: 70px;
+    top: 100%;
     right: 0;
-    width: 100%;
+    padding: 10px 20px;
+    width: 200px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
   }
 
-  /* Mostrar el menú cuando está activo */
   .menu-items.active {
     display: flex;
-    max-height: 500px; /* Ajusta según la cantidad de elementos */
-    opacity: 1;
   }
 
   .menu-items a {
-    padding: 15px 20px;
-    border-bottom: 1px solid #333;
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-section {
+    padding: 40px 20px;
   }
 
-  .menu-items a:last-child {
-    border-bottom: none;
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .logo img {
+    height: 40px;
   }
 }
