@@ -29,37 +29,6 @@
       }
     });
   </script>
-  <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu-items');
-      const menuToggle = document.querySelector('.menu-toggle');
-      menu.classList.toggle('active');
-  
-      // Actualizar el estado aria-expanded
-      const isActive = menu.classList.contains('active');
-      menuToggle.setAttribute('aria-expanded', isActive);
-    }
-  
-    // Cerrar el menú al hacer clic en un enlace
-    document.addEventListener('DOMContentLoaded', () => {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'light') {
-        document.body.classList.add('light-mode');
-      }
-  
-      const menuLinks = document.querySelectorAll('.menu-items a');
-      menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          const menu = document.querySelector('.menu-items');
-          const menuToggle = document.querySelector('.menu-toggle');
-          if (menu.classList.contains('active')) {
-            menu.classList.remove('active');
-            menuToggle.setAttribute('aria-expanded', false);
-          }
-        });
-      });
-    });
-  </script>
 </head>
 
 <body>
@@ -78,14 +47,6 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
-      <!-- Theme Toggle Button -->
-      <button class="theme-toggle" onclick="toggleTheme()">
-        <i class="fas fa-adjust"></i>
-      </button>
-      <!-- Menu Toggle Button (Visible en Pantallas Pequeñas) -->
-      <button class="menu-toggle" onclick="toggleMenu()" aria-expanded="false">
-        <img src="img/menu.png" alt="Menu" class="menu-icon">
-      </button>
     </div>
   </header>
 
