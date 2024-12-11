@@ -5,10 +5,10 @@
   <title>Jose Quintana</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/frame.css" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script>
     function toggleTheme() {
@@ -18,23 +18,24 @@
 </head>
 
 <body>
+  <!-- Botón para cambiar tema -->
   <button class="theme-toggle" onclick="toggleTheme()">
     <i class="fas fa-adjust"></i>
   </button>
 
   <div class="container">
     <!-- Header Section -->
-    <header>
-      <div class="header-content">
-        <img src="img/logo.png" alt="Site Logo" class="logo">
-        <nav class="navbar">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+    <header class="menu-container">
+      <div class="menu">
+        <div class="logo">
+          <img src="img/logo.png" alt="Logo" class="logo-image">
+        </div>
+        <nav class="menu-items">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#publications">Publications</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
@@ -44,23 +45,11 @@
       <div class="hero-content">
         <img src="img/me.jpg" alt="Jose Quintana" class="profile-img">
         <h1>Jose Daniel Quintana Fuentes</h1>
-        <p class="hero-subtitle">Graduate Student in Master in Electrical Engineering</p>
+        <p class="hero-subtitle">Graduate Student in Electrical Engineering</p>
         <ul class="social-icons">
-          <li>
-            <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/JoseQuintana20" target="_blank" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
+          <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
         </ul>
       </div>
     </section>
