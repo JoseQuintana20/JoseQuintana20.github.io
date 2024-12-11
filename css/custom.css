@@ -14,7 +14,7 @@ body {
 .menu-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Centra los ítems del menú */
   padding: 10px 20px;
   background-color: #1f1f1f;
   position: fixed;
@@ -30,11 +30,10 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-main {
-  padding-top: 100px; /* Altura del encabezado */
-}
-
+/* Posicionar el logo de manera absoluta para mantener el menú centrado */
 .logo {
+  position: absolute;
+  left: 20px;
   display: flex;
   align-items: center;
 }
@@ -75,6 +74,61 @@ main {
 .menu-items a.active {
   color: #4dabf7;
   border-bottom: 2px solid #4dabf7;
+}
+
+/* Botón de Toggle para Menú en Dispositivos Móviles (Opcional) */
+.menu-toggle {
+  display: none; /* Ocultar por defecto */
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 70px; /* Debe coincidir con la altura del header */
+    right: 0;
+    padding: 10px 20px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-items.active {
+    display: flex;
+  }
+  
+  .menu-toggle {
+    display: block; /* Mostrar en dispositivos pequeños */
+  }
+
+  .menu-items a {
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-section {
+    padding: 40px 20px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .logo img {
+    height: 40px;
+  }
 }
 
 /* Hero Section */
@@ -122,8 +176,8 @@ h1 {
   font-size: 1.2rem;
 }
 
-/* Social Media Icons */
-.social-icons {
+/* Social Media Icons in Hero Section */
+.hero .social-icons {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -131,15 +185,36 @@ h1 {
   list-style: none;
 }
 
-.social-icons li a {
+.hero .social-icons li a {
   color: #eaeaea;
   font-size: 2rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-icons li a:hover {
+.hero .social-icons li a:hover {
   color: #4dabf7;
   transform: scale(1.1);
+}
+
+/* Footer Social Media Icons */
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+}
+
+.footer-social-icons .social-icons li a {
+  font-size: 1.5rem;
+  color: #eaeaea; /* Color fijo para el footer */
+  transition: transform 0.3s ease;
+}
+
+.footer-social-icons .social-icons li a:hover {
+  color: #4dabf7; /* Puedes mantener o ajustar este color según prefieras */
+  transform: scale(1.2);
 }
 
 /* Section Highlights */
@@ -186,24 +261,8 @@ h1 {
   background: linear-gradient(135deg, #1f1f1f 30%, #2a2a2a 100%);
 }
 
-.footer-social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  list-style: none;
-  padding: 0;
-  margin: 20px auto;
-}
-
-.footer-social-icons li a {
-  font-size: 1.5rem;
-  color: #eaeaea;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.footer-social-icons li a:hover {
-  color: #4dabf7;
-  transform: scale(1.2);
+.footer-content p {
+  margin: 0 0 10px;
 }
 
 /* Theme Toggle Button */
@@ -260,7 +319,7 @@ body.light-mode .footer {
   color: #333;
 }
 
-/* Light Mode for Menu Items */
+/* Light Mode for Navigation Menu */
 body.light-mode .menu-items a {
   color: #333;
   background-color: transparent;
@@ -276,53 +335,17 @@ body.light-mode .menu-items a.active {
   border-bottom: 2px solid #007bff;
 }
 
-/* Social Icons - Light Mode */
-body.light-mode .social-icons li a {
+/* Light Mode for Hero Social Icons */
+body.light-mode .hero .social-icons li a {
   color: #333; /* Color en tema claro */
 }
 
-body.light-mode .social-icons li a:hover {
+body.light-mode .hero .social-icons li a:hover {
   color: #007bff; /* Hover en tema claro */
 }
 
+/* Social Icons - Light Mode (Footer remains sin cambios) */
+/* No es necesario añadir reglas aquí ya que los íconos del footer no deben cambiar */
+
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-  .menu-items {
-    display: none;
-    flex-direction: column;
-    background-color: #1f1f1f;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    padding: 10px 20px;
-    width: 200px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .menu-items.active {
-    display: flex;
-  }
-
-  .menu-items a {
-    padding: 10px 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .hero-section {
-    padding: 40px 20px;
-  }
-
-  .profile-img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .logo img {
-    height: 40px;
-  }
-}
+/* Ya incluido anteriormente */
