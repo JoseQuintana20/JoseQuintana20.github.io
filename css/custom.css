@@ -248,13 +248,18 @@ h1:hover {
 /* Footer Social Media Icons */
 .footer-social-icons {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  list-style: none;
-  padding: 0;
-  margin: 20px auto;
+  justify-content: center; /* Asegura que los íconos estén centrados */
+  align-items: center; /* Centra verticalmente */
+  gap: 15px; /* Espaciado entre íconos */
+  list-style: none; /* Elimina viñetas */
+  padding: 0; /* Elimina padding interno */
+  margin: 0 auto; /* Centra horizontalmente */
 }
 
+.footer-social-icons .social-icons li {
+  display: inline-block; /* Asegura que los íconos sean inline */
+  margin: 0;
+}
 
 .footer-social-icons .social-icons li a {
   font-size: 1.5rem;
@@ -320,6 +325,11 @@ h1:hover {
   margin-top: 30px;
   transition: background-color 0.3s ease, color 0.3s ease;
   background: linear-gradient(135deg, #1f1f1f 30%, #2a2a2a 100%);
+}
+
+.footer-content {
+  margin: 0 auto;
+  padding: 0;
 }
 
 .footer-content p {
