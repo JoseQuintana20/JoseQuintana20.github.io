@@ -28,11 +28,9 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
   background-color: #1f1f1f;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease;
 }
 
 .logo {
@@ -153,9 +151,6 @@ body {
 
 /* Theme Toggle Button */
 .theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
   background-color: #4dabf7;
   color: #fff;
   border: none;
@@ -166,13 +161,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
+  margin-left: auto; /* Alineación a la derecha */
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .theme-toggle:hover {
   background-color: #005cbf;
 }
+
 
 /* Light Mode */
 body.light-mode {
