@@ -133,7 +133,7 @@ hr {
   display: none; /* Oculta el botón por defecto */
   position: fixed;
   top: 20px; /* Ajusta la distancia desde la parte superior */
-  left: 10px; /* Ajusta la distancia desde el lado izquierdo */
+  left: 30px; /* Ajusta la distancia desde el lado izquierdo */
   z-index: 1001; /* Asegura que esté por encima de otros elementos */
   background-color: transparent; /* Fondo transparente */
   border: none; /* Sin bordes */
