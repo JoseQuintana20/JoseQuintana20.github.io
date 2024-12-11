@@ -130,11 +130,11 @@ hr {
 }
 
 .menu-button {
-  display: none; /* Oculta el botón por defecto */
-  position: fixed;
+  display: none; /* Ocultar por defecto */
+  position: absolute; /* Cambia a absolute para posicionarlo relativo a su contenedor */
   top: 20px; /* Ajusta la distancia desde la parte superior */
-  left: 30px; /* Ajusta la distancia desde el lado izquierdo */
-  z-index: 1001; /* Asegura que esté por encima de otros elementos */
+  left: 10px; /* Ajusta la distancia desde el lado izquierdo */
+  z-index: 1001; /* Asegura que esté sobre otros elementos */
   background-color: transparent; /* Fondo transparente */
   border: none; /* Sin bordes */
   cursor: pointer; /* Cambia el cursor al pasar el mouse */
@@ -157,7 +157,8 @@ hr {
   }
 
   .menu-button {
-    display: block; /* Muestra el botón en pantallas pequeñas */
+    display: block; /* Hacer visible el botón en pantallas pequeñas */
+    margin-left: 20px; /* Ajustar separación con respecto al logo */
   }
 
   .menu .logo {
@@ -177,8 +178,20 @@ hr {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .menu-items.active {
-    display: flex; /* Muestra el menú desplegable cuando está activo */
+  .menu .menu-items {
+    display: none;
+    flex-direction: column;
+    background: #343a40;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu .menu-items.active {
+    display: flex; /* Muestra el menú desplegable */
   }
 
   .menu-items a {
