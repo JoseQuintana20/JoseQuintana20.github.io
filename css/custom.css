@@ -91,16 +91,6 @@ main {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Hero Section Logo */
-.hero-section .profile-img {
-  border-color: #4dabf7; /* Borde predeterminado en modo oscuro */
-  transition: border-color 0.3s ease;
-}
-
-body.light-mode .hero-section .profile-img {
-  border-color: #007bff; /* Borde en modo claro */
-}
-
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
@@ -214,14 +204,6 @@ h1 {
 .footer-social-icons li a:hover {
   color: #4dabf7;
   transform: scale(1.2);
-}
-
-body.light-mode .footer-social-icons li a {
-  color: #333; /* Color en modo claro */
-}
-
-body.light-mode .footer-social-icons li a:hover {
-  color: #007bff; /* Hover en modo claro */
 }
 
 /* Theme Toggle Button */
