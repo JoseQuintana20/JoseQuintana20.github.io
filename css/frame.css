@@ -93,57 +93,67 @@ hr {
 
 /* Mobile Menu Button */
 .menu-button {
-  display: none;
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  z-index: 1001;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: #eaeaea;
+  display: none; /* Ocultar por defecto */
+  position: absolute; /* Mantener para pantallas grandes */
+  top: 20px; /* Ajusta la distancia desde la parte superior */
+  left: 10px; /* Ajusta la distancia desde el lado izquierdo */
+  z-index: 1001; /* Asegura que esté sobre otros elementos */
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin bordes */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  font-size: 24px; /* Tamaño del ícono */
+  color: #eaeaea; /* Color del ícono */
 }
 
 .menu-button:hover {
-  color: #4dabf7;
+  color: #4dabf7; /* Cambia el color al pasar el cursor */
 }
 
 /* Responsive Menu */
 @media (max-width: 768px) {
   .menu-container {
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: row; /* Asegura que los elementos estén en fila */
+    justify-content: flex-start; /* Alinear al inicio */
+    align-items: center;
     padding: 10px;
+    position: relative; /* Evita superposición */
   }
 
   .menu-button {
-    display: block;
+    display: block; /* Hacer visible el botón en pantallas pequeñas */
+    position: relative; /* Cambiar a relativo para participar en el flujo de flexbox */
+    top: 0; /* Resetear posición top */
+    left: 0; /* Resetear posición left */
+    margin-right: 15px; /* Espacio entre el botón y el logo */
   }
 
   .menu .logo {
-    order: 2;
+    order: 2; /* El logo se mueve después del botón */
+    margin-left: 0; /* Elimina márgenes adicionales */
   }
 
-  .menu-items {
+  .menu .menu-items {
     display: none;
     flex-direction: column;
+    background: #343a40;
+    width: 100%;
     position: absolute;
     top: 70px;
     left: 0;
-    width: 100%;
-    background: #343a40;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .menu-items.active {
-    display: flex;
+  .menu .menu-items.active {
+    display: flex; /* Muestra el menú desplegable */
   }
 
   .menu-items a {
+    color: rgba(255, 255, 255, 0.8);
     padding: 10px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
   }
 
   .menu-items a:hover {
