@@ -47,6 +47,7 @@ body {
 
 .logo img:hover {
   transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 /* Navigation Menu */
@@ -62,15 +63,31 @@ body {
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.menu-items a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  display: block;
+  background: #4dabf7;
+  transition: width 0.3s ease;
+  bottom: 0;
+  left: 0;
 }
 
 .menu-items a:hover {
   color: #4dabf7;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Active Menu Items */
+.menu-items a:hover::after {
+  width: 100%;
+}
+
 .menu-items a.active {
   color: #4dabf7;
   border-bottom: 2px solid #4dabf7;
@@ -84,8 +101,24 @@ body {
   cursor: pointer;
   position: absolute;
   right: 20px;
+  transition: transform 0.3s ease;
 }
 
+.menu-toggle:hover {
+  transform: rotate(90deg);
+}
+
+/* Botones con Efectos Interactivos */
+button, .theme-toggle, .menu-button {
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover, .theme-toggle:hover, .menu-button:hover {
+  box-shadow: 0 0 10px rgba(77, 171, 247, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   .menu-items {
     display: none;
@@ -97,10 +130,12 @@ body {
     padding: 10px 20px;
     width: 200px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
   }
 
   .menu-items.active {
     display: flex;
+    animation: fadeIn 0.3s ease forwards;
   }
   
   .menu-toggle {
@@ -109,6 +144,7 @@ body {
 
   .menu-items a {
     padding: 10px 0;
+    font-size: 18px;
   }
 }
 
@@ -155,6 +191,11 @@ h1 {
   line-height: 1.2;
   margin: 0 0 10px;
   text-align: center;
+  transition: color 0.3s ease;
+}
+
+h1:hover {
+  color: #4dabf7;
 }
 
 .profile-img {
@@ -164,16 +205,22 @@ h1 {
   border: 4px solid #4dabf7;
   object-fit: cover;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .profile-img:hover {
-  box-shadow: 0 0 10px 2px #4dabf7;
+  box-shadow: 0 0 20px 4px #4dabf7;
+  transform: scale(1.05);
 }
 
 .hero-subtitle {
   margin-top: 10px;
   font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.hero-subtitle:hover {
+  color: #4dabf7;
 }
 
 /* Social Media Icons in Hero Section */
@@ -188,12 +235,13 @@ h1 {
 .hero .social-icons li a {
   color: #eaeaea;
   font-size: 2rem;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 
 .hero .social-icons li a:hover {
   color: #4dabf7;
   transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 /* Footer Social Media Icons */
@@ -209,7 +257,7 @@ h1 {
 .footer-social-icons .social-icons li a {
   font-size: 1.5rem;
   color: #eaeaea; /* Color fijo para el footer */
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .footer-social-icons .social-icons li a:hover {
@@ -223,14 +271,15 @@ h1 {
   color: #eaeaea;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   margin: 20px auto;
   padding: 20px;
 }
 
 .content-container:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  background-color: #3a3a3a;
 }
 
 /* About Section */
@@ -244,10 +293,20 @@ h1 {
 
 #about h2 {
   color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+#about h2:hover {
+  color: #4dabf7;
 }
 
 #about p {
   color: #eaeaea;
+  transition: color 0.3s ease;
+}
+
+#about p:hover {
+  color: #ffffff;
 }
 
 /* Footer */
@@ -263,6 +322,11 @@ h1 {
 
 .footer-content p {
   margin: 0 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-content p:hover {
+  color: #4dabf7;
 }
 
 /* Theme Toggle Button */
@@ -319,7 +383,10 @@ body.light-mode .footer {
   color: #333;
 }
 
-/* Light Mode for Navigation Menu */
+body.light-mode .footer-content p {
+  color: #333;
+}
+
 body.light-mode .menu-items a {
   color: #333;
   background-color: transparent;
@@ -347,5 +414,14 @@ body.light-mode .hero .social-icons li a:hover {
 /* Social Icons - Light Mode (Footer remains sin cambios) */
 /* No es necesario añadir reglas aquí ya que los íconos del footer no deben cambiar */
 
-/* Responsive Design */
-/* Ya incluido anteriormente */
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
