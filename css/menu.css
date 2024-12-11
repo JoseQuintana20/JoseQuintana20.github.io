@@ -81,13 +81,13 @@
   }
 
   .menu .menu-button {
-    display: block;
-    cursor: pointer;
+    top: 10px;
+    right: 10px;
   }
 
   .menu .menu-button img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .menu .menu-button.active + .menu-items {
