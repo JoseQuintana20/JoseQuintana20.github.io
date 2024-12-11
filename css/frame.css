@@ -146,28 +146,54 @@ hr {
 }
 
 @media (max-width: 768px) {
+  .menu-container {
+    display: flex;
+    flex-direction: row; /* Asegura que los elementos estén en fila */
+    justify-content: space-between; /* Espaciado adecuado */
+    align-items: center;
+    padding: 10px;
+    position: relative; /* Evita superposición */
+  }
+
   .menu-button {
-    font-size: 20px; /* Ajusta el tamaño en pantallas pequeñas */
-    top: 10px;
-    right: 10px;
+    display: block; /* Muestra el botón en pantallas pequeñas */
+    order: 1; /* Prioriza el botón a la izquierda */
+    margin-right: 10px; /* Espaciado entre el botón y el logo */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    cursor: pointer;
+    font-size: 24px; /* Tamaño del ícono */
+    color: #eaeaea; /* Color del botón */
   }
 
-  .menu .menu-items {
-    display: none;
-    flex-direction: column;
-    background: #343a40;
-    width: 100%;
+  .menu .logo {
+    order: 2; /* El logo se mueve después del botón */
+    margin-left: 0; /* Elimina márgenes adicionales */
+  }
+
+  .menu-items {
+    display: none; /* Oculta el menú por defecto */
+    flex-direction: column; /* Menú desplegable vertical */
     position: absolute;
-    top: 100%;
+    top: 60px; /* Ajusta posición debajo del header */
     left: 0;
+    width: 100%; /* Ocupa el ancho completo */
+    background-color: #343a40;
+    z-index: 1000; /* Por encima de otros elementos */
   }
 
-  .menu .menu-items a {
+  .menu-items.active {
+    display: flex; /* Muestra el menú desplegable al activarlo */
+  }
+
+  .menu-items a {
+    color: rgba(255, 255, 255, 0.8);
     padding: 10px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
   }
 
-  .menu .menu-items a:hover {
+  .menu-items a:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
 }
