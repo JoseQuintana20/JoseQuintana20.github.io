@@ -1,35 +1,35 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <title>José Quintana</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- Carga de CSS -->
+  <!-- CSS Links -->
   <link href="css/frame.css" rel="stylesheet" type="text/css" />
   <link href="css/controls.css" rel="stylesheet" type="text/css" />
   <link href="css/custom.css" rel="stylesheet" type="text/css" />
   
-  <!-- Font Awesome para íconos sociales -->
+  <!-- Font Awesome for Social Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   
   <!-- Favicon -->
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   
-  <!-- Script para el Toggle de Tema -->
+  <!-- Theme Toggle Script -->
   <script>
     function toggleTheme() {
       const body = document.body;
       body.classList.toggle('light-mode');
   
-      // Guarda la preferencia del usuario en localStorage
+      // Save user preference in localStorage
       const isLightMode = body.classList.contains('light-mode');
       localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
     }
   
-    // Aplica el tema almacenado en localStorage al cargar la página
+    // Apply saved theme on page load
     document.addEventListener('DOMContentLoaded', () => {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme === 'light') {
@@ -51,19 +51,19 @@
       </div>
       <!-- Navigation Menu -->
       <nav class="menu-items" aria-label="Main Navigation">
-        <a href="#about">Acerca de Mí</a>
-        <a href="#education">Formación Académica</a>
-        <a href="#experience">Experiencia</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#publications">Publicaciones</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#contact">Contacto</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
       </nav>
       <!-- Theme Toggle Button -->
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
         <i class="fas fa-adjust"></i>
       </button>
-      <!-- Botón de Menú para Dispositivos Móviles -->
+      <!-- Mobile Menu Button -->
       <button class="menu-button" aria-label="Toggle Menu">
         <i class="fas fa-bars"></i>
       </button>
@@ -77,9 +77,9 @@
       <div class="hero-content">
         <img src="img/me.jpg" alt="José Quintana" class="profile-img">
         <h1>José Daniel Quintana Fuentes</h1>
-        <p class="hero-subtitle">Ingeniero Electrónico y Estudiante de Maestría en Ingeniería Eléctrica</p>
+        <p class="hero-subtitle">Electronics Engineer and Master's Student in Electrical Engineering</p>
         <ul class="social-icons">
-          <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://twitter.com/josequintana" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
           <li><a href="https://linkedin.com/in/josequintana" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
           <li><a href="https://github.com/josequintana" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
         </ul>
@@ -89,18 +89,18 @@
     <!-- About Me Section -->
     <section id="about" class="content-container">
       <div class="content">
-        <h2>Acerca de Mí</h2>
+        <h2>About Me</h2>
         <hr>
         <p>
-          Soy José Quintana, ingeniero electrónico y estudiante de maestría en ingeniería eléctrica, con una sólida formación en el diseño y desarrollo de sistemas tecnológicos avanzados. Mi pasión se centra en la integración de inteligencia artificial, control automático y tecnologías innovadoras, aplicadas a campos como los Vehículos Aéreos No Tripulados (UAVs), el Internet de las Cosas (IoT) y la navegación autónoma. Durante mi trayectoria académica y profesional, he adquirido experiencia en investigación, desarrollo de prototipos y liderazgo de proyectos multidisciplinarios, destacándome por mi compromiso con la excelencia, creatividad y un enfoque orientado al aprendizaje continuo. Mi objetivo es contribuir significativamente al avance tecnológico mediante soluciones que transformen industrias y mejoren la calidad de vida.
+          I am José Quintana, an electronics engineer and a master's student in electrical engineering with a robust background in designing and developing advanced technological systems. My passion lies in integrating artificial intelligence, automatic control, and innovative technologies applied to fields such as Unmanned Aerial Vehicles (UAVs), the Internet of Things (IoT), and autonomous navigation. Throughout my academic and professional journey, I have gained experience in research, prototype development, and leading multidisciplinary projects. I am recognized for my commitment to excellence, creativity, and a continuous learning mindset. My goal is to make significant contributions to technological advancement through solutions that transform industries and enhance quality of life.
         </p>
-        <h3>Intereses y Motivaciones</h3>
+        <h3>Interests and Motivations</h3>
         <p>
-          Me impulsa la idea de fusionar la teoría y la práctica para crear soluciones tecnológicas innovadoras. Mi interés por la Física Moderna y las matemáticas me lleva a explorar continuamente nuevas áreas del conocimiento, manteniéndome actualizado con tecnologías de vanguardia. Además, disfruto del diseño y la construcción de hardware, especialmente utilizando herramientas de impresión 3D. Fuera del ámbito académico y profesional, me interesa la exploración de videojuegos, que considero una forma creativa de entender la interacción humano-computadora y un espacio de inspiración para proyectos futuros.
+          I am driven by the idea of merging theory and practice to create innovative technological solutions. My interest in modern physics and mathematics continuously leads me to explore new areas of knowledge, keeping me updated with cutting-edge technologies. Additionally, I enjoy designing and building hardware, especially using 3D printing tools. Outside the academic and professional realm, I am passionate about exploring video games, which I consider a creative way to understand human-computer interaction and a source of inspiration for future projects.
         </p>
-        <h3>Proyección Futura</h3>
+        <h3>Future Vision</h3>
         <p>
-          Mi visión a largo plazo es convertirme en un referente en el campo de la ingeniería electrónica e inteligencia artificial, liderando proyectos de investigación y desarrollo que impacten positivamente la sociedad. Aspiro a contribuir al avance de los UAVs y sistemas autónomos, integrando mi pasión por la innovación con soluciones tecnológicas que transformen industrias y mejoren la calidad de vida.
+          My long-term vision is to become a leading figure in the fields of electronics engineering and artificial intelligence, spearheading research and development projects that positively impact society. I aspire to advance UAVs and autonomous systems by integrating my passion for innovation with technological solutions that transform industries and improve quality of life.
         </p>
       </div>
     </section>
@@ -108,14 +108,14 @@
     <!-- Education Section -->
     <section id="education" class="content-container">
       <div class="content">
-        <h2>Formación Académica</h2>
+        <h2>Education</h2>
         <hr>
         <ul>
           <li>
-            <strong>Ingeniería Electrónica:</strong> Obtuve mi título de pregrado en Ingeniería Electrónica, donde desarrollé una sólida base en electrónica, programación y sistemas embebidos, con un enfoque en la aplicación práctica de teorías avanzadas.
+            <strong>Bachelor of Electronics Engineering:</strong> I obtained my undergraduate degree in Electronics Engineering, where I developed a solid foundation in electronics, programming, and embedded systems, focusing on the practical application of advanced theories.
           </li>
           <li>
-            <strong>Maestría en Ingeniería Eléctrica:</strong> Actualmente curso una maestría con especialización en Vehículos Autónomos e IoT. Mi investigación se centra en la identificación, estimación y control de sistemas dinámicos, principalmente enfocados en drones y su capacidad para navegar en entornos complejos.
+            <strong>Master's in Electrical Engineering:</strong> I am currently pursuing a master's degree specializing in Autonomous Vehicles and IoT. My research focuses on the identification, estimation, and control of dynamic systems, primarily centered on drones and their ability to navigate complex environments.
           </li>
         </ul>
       </div>
@@ -124,55 +124,55 @@
     <!-- Experience Section -->
     <section id="experience" class="content-container">
       <div class="content">
-        <h2>Experiencia Académica y Profesional</h2>
+        <h2>Academic and Professional Experience</h2>
         <hr>
-        <p>A lo largo de mi trayectoria, he participado en diversos proyectos que integran tecnologías avanzadas y habilidades multidisciplinarias:</p>
+        <p>Throughout my career, I have participated in various projects that integrate advanced technologies and multidisciplinary skills:</p>
         <ol>
           <li>
-            <strong>Desarrollo de Sistemas IoT e IA:</strong>
+            <strong>IoT and AI Systems Development:</strong>
             <ul>
-              <li>Implementación de sistemas de respuesta automática mediante procesamiento de lenguaje natural, como chatbots.</li>
-              <li>Optimización de modelos predictivos para la gestión de ventas de propiedades residenciales.</li>
+              <li>Implemented automated response systems using natural language processing, such as chatbots.</li>
+              <li>Optimized predictive models for managing residential property sales.</li>
             </ul>
           </li>
           <li>
-            <strong>Investigación en UAVs:</strong>
+            <strong>UAV Research:</strong>
             <ul>
-              <li>Desarrollo de algoritmos para seguimiento de trayectorias dinámicas en drones.</li>
-              <li>Integración de tecnologías de percepción, como cámaras de profundidad y sistemas de mapeo 3D, para mejorar la navegación autónoma.</li>
-              <li>Enfrentamiento de desafíos como la evasión de obstáculos y el control adaptativo.</li>
+              <li>Developed algorithms for tracking dynamic trajectories in drones.</li>
+              <li>Integrated perception technologies, including depth cameras and 3D mapping systems, to enhance autonomous navigation.</li>
+              <li>Addressed challenges such as obstacle avoidance and adaptive control.</li>
             </ul>
           </li>
           <li>
-            <strong>Aplicaciones de Ciencia de Datos:</strong>
+            <strong>Data Science Applications:</strong>
             <ul>
-              <li>Realización de análisis exploratorio y preprocesamiento de datos en proyectos académicos.</li>
-              <li>Uso de aprendizaje supervisado y no supervisado para resolver problemas del mundo real.</li>
+              <li>Conducted exploratory data analysis and preprocessing in academic projects.</li>
+              <li>Utilized supervised and unsupervised learning to solve real-world problems.</li>
             </ul>
           </li>
           <li>
-            <strong>Participación en Grupos de Investigación:</strong>
+            <strong>Research Group Participation:</strong>
             <ul>
               <li>
-                <strong>Grupo de Investigación en Control Automático:</strong> Desarrollo de mi tesis de maestría bajo la dirección del Ph.D. Eduardo Giraldo. Este grupo investiga áreas como identificación de sistemas, control adaptable, control óptimo, problemas inversos dinámicos, estimación de estados y sus aplicaciones en sistemas físicos que van desde sistemas biológicos hasta sistemas de potencia.
+                <strong>Automatic Control Research Group:</strong> I am developing my master's thesis under the supervision of Ph.D. Eduardo Giraldo. This group focuses on researching, developing, and innovating in areas such as system identification, adaptive control, optimal control, dynamic inverse problems, state estimation, and their applications in physical systems ranging from biological systems to power systems.
                 <ul>
-                  <li>Principales líneas de investigación:</li>
+                  <li>Main research areas include:</li>
                   <ul>
-                    <li>Control Adaptativo</li>
-                    <li>Control Inteligente</li>
-                    <li>Control No Lineal</li>
-                    <li>Control Óptimo</li>
-                    <li>Estimación de Estados</li>
-                    <li>Identificación de Sistemas</li>
-                    <li>Problemas Inversos Dinámicos</li>
-                    <li>Control Estocástico</li>
-                    <li>Desarrollo de Ambientes Virtuales</li>
-                    <li>Diseño e Implementación de Prototipos de Hardware</li>
+                    <li>Adaptive Control</li>
+                    <li>Intelligent Control</li>
+                    <li>Nonlinear Control</li>
+                    <li>Optimal Control</li>
+                    <li>State Estimation</li>
+                    <li>System Identification</li>
+                    <li>Dynamic Inverse Problems</li>
+                    <li>Stochastic Control</li>
+                    <li>Virtual Environment Development</li>
+                    <li>Hardware Prototype Design and Implementation</li>
                   </ul>
                 </ul>
               </li>
               <li>
-                <strong>Semillero de Investigación en Control Automático:</strong> Formación de estudiantes de pregrado en áreas como simulación de sistemas físicos, control básico aplicado, herramientas de programación (MATLAB, Simulink, LabVIEW, entre otras) y control embebido.
+                <strong>Automatic Control Research Seedbed:</strong> I participate in training undergraduate students in areas such as physical system simulation, applied basic control, programming tools (MATLAB, Simulink, LabVIEW, among others), and embedded control.
               </li>
             </ul>
           </li>
@@ -183,24 +183,24 @@
     <!-- Projects Section -->
     <section id="projects" class="content-container">
       <div class="content">
-        <h2>Proyectos Académicos y Profesionales</h2>
+        <h2>Academic and Professional Projects</h2>
         <hr>
         <ul>
-          <li><strong>Hand Detection and Finger Counting:</strong> Detector de manos para realizar el conteo de dedos usando Python, OpenCV y MediaPipe.</li>
-          <li><strong>Segmentation and Contour Recognition:</strong> Filtrado de paneles ubicados en el techo de un edificio usando Colab, para segmentarlos por colores y bordes y luego contar el número de paneles.</li>
-          <li><strong>Segmentation of Colored Balls:</strong> Segmentación de pelotas de colores mediante espacios de color.</li>
-          <li><strong>Audio Signal Processing:</strong> Código en MATLAB para el análisis y filtrado de señales de audio.</li>
-          <li><strong>Image Recognition with Deep Neural Networks:</strong> Reconocimiento de imágenes con redes neuronales usando Deep Network Designer de MATLAB.</li>
-          <li><strong>Detection of Open/Closed Eyes:</strong> Identificación y análisis de los ojos mediante detección de objetos en cascada y segmentación de imágenes en MATLAB.</li>
-          <li><strong>Facial and Voice Recognition:</strong> Reconocimiento facial con OpenCV y Python usando métodos como EigenFaces, FisherFaces y LBPH. Reconocimiento de voz mediante SpeechRecognition con la API de Google.</li>
-          <li><strong>Proyecto Alarma Contra Incendios:</strong> Proyecto desarrollado en el área de diseños microelectrónicos.</li>
-          <li><strong>ChatBot:</strong> Desarrollo de una aplicación con inteligencia artificial para responder preguntas frecuentes de la comunidad académica de la Facultad de Ingenierías de la Universidad Tecnológica de Pereira.</li>
-          <li><strong>IoT Project with ESP32:</strong> Proyecto IoT con ESP32 para control de LED, comunicación MQTT, integración con Node-RED, monitoreo remoto mediante Telegram y almacenamiento de datos en PostgreSQL.</li>
-          <li><strong>Graph Optimization:</strong> Propuesta de distribución para minimizar las estaciones de medición necesarias en una red de gasoductos en Texas mediante análisis y optimización de grafos.</li>
-          <li><strong>Maze (Labyrinth Project):</strong> Generación y resolución de laberintos utilizando metodologías de árboles expansivos aleatorios. Implementación de algoritmos de Prim, Kruskal y Dijkstra para resolver laberintos generados aleatoriamente.</li>
-          <li><strong>Multi-Agent Motion Planning:</strong> Planificación de movimiento en robótica multiagente en un espacio rectangular con obstáculos en movimiento y tareas distribuidas. Implementación de algoritmos para optimizar movimientos y minimizar distancias recorridas.</li>
-          <li><strong>Filtrado de Objetos y Percepción del Entorno para Evasión Autónoma de Obstáculos en Drones:</strong> Desarrollo de sistemas autónomos para drones utilizando visión por computador basada en redes neuronales profundas y cámaras de profundidad, permitiendo una navegación autónoma segura en entornos dinámicos y complejos.</li>
-          <li><strong>BattleBot WiFi Controller:</strong> Control de un BattleBot en tiempo real mediante una interfaz web responsive alojada en un ESP32. Incluye control de motores con puente H L298N y activación de armas mediante un relé activo bajo.</li>
+          <li><strong>Hand Detection and Finger Counting:</strong> Developed a hand detector to count fingers using Python, OpenCV, and MediaPipe.</li>
+          <li><strong>Segmentation and Contour Recognition:</strong> Filtered rooftop panels in a building using Colab to segment them by colors and edges, then counted the number of panels.</li>
+          <li><strong>Segmentation of Colored Balls:</strong> Segmented colored balls using color spaces.</li>
+          <li><strong>Audio Signal Processing:</strong> Created MATLAB code for audio signal analysis and filtering.</li>
+          <li><strong>Image Recognition with Deep Neural Networks:</strong> Implemented image recognition using neural networks with MATLAB’s Deep Network Designer.</li>
+          <li><strong>Detection of Open/Closed Eyes:</strong> Identified and analyzed eyes using cascade object detection and image segmentation in MATLAB.</li>
+          <li><strong>Facial and Voice Recognition:</strong> Combined OpenCV and Python for facial recognition using methods like EigenFaces, FisherFaces, and LBPH, and utilized Google's SpeechRecognition API for voice recognition.</li>
+          <li><strong>Fire Alarm Project:</strong> Developed a project in the field of microelectronic designs.</li>
+          <li><strong>ChatBot:</strong> Created an AI-powered application to respond to frequently asked questions from the academic community at the Faculty of Engineering, Technological University of Pereira.</li>
+          <li><strong>IoT Project with ESP32:</strong> Developed an IoT project using ESP32 for LED control, MQTT communication, Node-RED integration, remote monitoring via Telegram, and data storage in PostgreSQL.</li>
+          <li><strong>Graph Optimization:</strong> Proposed a distribution strategy to minimize the number of measurement stations required in a Texas gas pipeline network through graph analysis and optimization.</li>
+          <li><strong>Maze (Labyrinth Project):</strong> Generated and solved mazes using random expansive tree methodologies, implementing Prim, Kruskal, and Dijkstra algorithms to solve randomly generated mazes.</li>
+          <li><strong>Multi-Agent Motion Planning:</strong> Planned movements in multi-agent robotic systems within a rectangular space with moving obstacles and distributed tasks, implementing algorithms to optimize movements and minimize traveled distances.</li>
+          <li><strong>Object Filtering and Environmental Perception for Autonomous Obstacle Evasion in Drones:</strong> Developed autonomous drone systems capable of detecting and evading obstacles in dynamic and complex environments using computer vision based on deep neural networks and depth cameras. Implemented advanced filtering and segmentation techniques with public datasets like VisDrone2019 and AU-AIR to enable real-time dynamic trajectory generation in Python.</li>
+          <li><strong>BattleBot WiFi Controller:</strong> Controlled a BattleBot in real-time through a responsive web interface hosted on ESP32, including motor control with H-bridge L298N and weapon activation via a low-side relay.</li>
         </ul>
       </div>
     </section>
@@ -208,18 +208,18 @@
     <!-- Publications Section -->
     <section id="publications" class="content-container">
       <div class="content">
-        <h2>Publicaciones</h2>
+        <h2>Publications</h2>
         <hr>
         <ol>
           <li>
-            <strong>Quintana, J.,</strong> Co-Authors. (Año). “Título de la Publicación.” <em>Nombre del Journal</em>, Vol. (Issue), Páginas. 
+            <strong>Quintana, J.,</strong> Co-Authors. (Year). “Title of the Publication.” <em>Journal Name</em>, Vol. (Issue), Pages. 
             <a href="https://doi.org/example" target="_blank">DOI</a>
           </li>
           <li>
-            <strong>Quintana, J.,</strong> Co-Authors. (Año). “Otro Artículo de Investigación.” <em>Actas de la Conferencia</em>, Lugar. 
+            <strong>Quintana, J.,</strong> Co-Authors. (Year). “Another Research Article.” <em>Conference Proceedings</em>, Location. 
             <a href="https://doi.org/example2" target="_blank">DOI</a>
           </li>
-          <!-- Añade más publicaciones según corresponda -->
+          <!-- Add more publications as needed -->
         </ol>
       </div>
     </section>
@@ -227,13 +227,13 @@
     <!-- Skills Section -->
     <section id="skills" class="content-container">
       <div class="content">
-        <h2>Habilidades Técnicas</h2>
+        <h2>Technical Skills</h2>
         <hr>
         <ul>
-          <li><strong>Programación:</strong> Experiencia en C++, C, Python, Java, JavaScript, R y MicroPython.</li>
-          <li><strong>Herramientas:</strong> Dominio de MATLAB, Simulink, Git, AWS y software de diseño para hardware como herramientas de impresión 3D.</li>
-          <li><strong>Bases de Datos:</strong> Conocimientos en sistemas de gestión de bases de datos como MariaDB y MySQL.</li>
-          <li><strong>Especializaciones:</strong> Robótica, especialmente robótica aérea, control adaptativo, predicción de trayectorias y navegación autónoma.</li>
+          <li><strong>Programming:</strong> Proficient in Python, C++, Java, JavaScript, R, and MicroPython.</li>
+          <li><strong>Tools:</strong> Skilled in MATLAB, Simulink, Git, AWS, and hardware design software including 3D printing tools.</li>
+          <li><strong>Database Management:</strong> Experience with database management systems such as MariaDB and MySQL.</li>
+          <li><strong>Specializations:</strong> Robotics, especially aerial robotics, adaptive control, trajectory prediction, and autonomous navigation.</li>
         </ul>
       </div>
     </section>
@@ -241,9 +241,9 @@
     <!-- Contact Section -->
     <section id="contact" class="content-container">
       <div class="content">
-        <h2>Contacto</h2>
+        <h2>Contact</h2>
         <hr>
-        <p>Estoy siempre abierto a nuevas oportunidades y colaboraciones. No dudes en ponerte en contacto conmigo a través de las siguientes vías:</p>
+        <p>I am always open to new opportunities and collaborations. Feel free to reach out to me through the following channels:</p>
         <ul>
           <li><strong>Email:</strong> <a href="mailto:josequintana@example.com">josequintana@example.com</a></li>
           <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/josequintana" target="_blank">linkedin.com/in/josequintana</a></li>
@@ -257,7 +257,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
-      <p>&copy; 2024 José Quintana. Todos los derechos reservados.</p>
+      <p>&copy; 2024 José Quintana. All Rights Reserved.</p>
       <div class="footer-social-icons">
         <ul class="social-icons">
           <li><a href="https://linkedin.com/in/josequintana" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
@@ -268,7 +268,7 @@
     </div>
   </footer>
 
-  <!-- Script para Manejar el Menú Móvil -->
+  <!-- Mobile Menu Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const menuButton = document.querySelector('.menu-button');
