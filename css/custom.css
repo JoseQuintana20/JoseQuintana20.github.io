@@ -8,6 +8,7 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: #1f1f1f;
   color: #eaeaea;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .content-table > div:first-child > div:first-child > h2:first-child {
@@ -31,19 +32,19 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
-/* Logo Styling */
 .logo {
   display: flex;
   align-items: center;
 }
 
 .logo img {
-  height: 50px; /* Ajustar tamaño del logo */
+  height: 50px;
   width: auto;
   max-width: 100px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .logo img:hover {
@@ -79,6 +80,7 @@ body {
   padding: 60px 20px;
   background: linear-gradient(135deg, #1f1f1f 30%, #2a2a2a 100%);
   color: #eaeaea;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .hero-content {
@@ -93,6 +95,7 @@ body {
   border: 4px solid #4dabf7;
   object-fit: cover;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease;
 }
 
 .hero-subtitle {
@@ -126,6 +129,7 @@ body {
   text-align: center;
   padding: 20px;
   margin-top: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .footer-social-icons {
@@ -179,7 +183,6 @@ body.light-mode {
 body.light-mode .menu-container {
   background-color: #ffffff;
   color: #333;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 body.light-mode .menu-container .menu-items a {
@@ -195,10 +198,6 @@ body.light-mode .hero-section {
   color: #333;
 }
 
-body.light-mode .hero-content {
-  color: #333;
-}
-
 body.light-mode .profile-img {
   border-color: #007bff;
 }
@@ -206,7 +205,6 @@ body.light-mode .profile-img {
 body.light-mode .footer {
   background-color: #ffffff;
   color: #333;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 body.light-mode .footer-social-icons li a {
@@ -216,17 +214,6 @@ body.light-mode .footer-social-icons li a {
 body.light-mode .footer-social-icons li a:hover {
   color: #007bff;
 }
-
-/* Light Mode for Buttons */
-body.light-mode .theme-toggle {
-  background-color: #007bff;
-  color: #fff;
-}
-
-body.light-mode .theme-toggle:hover {
-  background-color: #0056b3;
-}
-
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
