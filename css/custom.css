@@ -178,6 +178,16 @@ body.light-mode {
 
 body.light-mode .menu-container {
   background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .menu-container .menu-items a {
+  color: #333;
+}
+
+body.light-mode .menu-container .menu-items a:hover {
+  color: #007bff;
 }
 
 body.light-mode .hero-section {
@@ -185,17 +195,36 @@ body.light-mode .hero-section {
   color: #333;
 }
 
+body.light-mode .hero-content {
+  color: #333;
+}
+
+body.light-mode .profile-img {
+  border-color: #007bff;
+}
+
 body.light-mode .footer {
   background-color: #ffffff;
   color: #333;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-body.light-mode .menu-items a {
+body.light-mode .footer-social-icons li a {
   color: #333;
 }
 
-body.light-mode .menu-items a:hover {
+body.light-mode .footer-social-icons li a:hover {
   color: #007bff;
+}
+
+/* Light Mode for Buttons */
+body.light-mode .theme-toggle {
+  background-color: #007bff;
+  color: #fff;
+}
+
+body.light-mode .theme-toggle:hover {
+  background-color: #0056b3;
 }
 
 
