@@ -8,14 +8,14 @@ body {
   background-color: #1f1f1f;
   color: #eaeaea;
   transition: background-color 0.3s ease, color 0.3s ease;
-  padding-top: 70px; /* Agrega padding-top igual a la altura del encabezado */
+  padding-top: 70px; /* Adds padding-top equal to the header height */
 }
 
 /* Header and Logo */
 .menu-container {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centra los ítems del menú */
+  justify-content: center;
   padding: 10px 20px;
   background-color: #1f1f1f;
   position: fixed;
@@ -175,6 +175,7 @@ button:hover, .theme-toggle:hover, .menu-button:hover {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  height: 100vh; /* Full viewport height */
   padding: 100px 20px 60px;
   background: linear-gradient(135deg, #1f1f1f 30%, #2a2a2a 100%);
   background-attachment: fixed; /* Parallax effect */
@@ -185,13 +186,18 @@ button:hover, .theme-toggle:hover, .menu-button:hover {
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.2;
-  margin: 0 0 10px;
+  margin: 0;
   text-align: center;
+  color: #eaeaea;
   transition: color 0.3s ease;
 }
 
@@ -231,6 +237,7 @@ h1:hover {
   margin-top: 20px;
   gap: 15px;
   list-style: none;
+  padding: 0;
 }
 
 .hero .social-icons li a {
