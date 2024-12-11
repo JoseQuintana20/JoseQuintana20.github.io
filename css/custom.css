@@ -91,18 +91,27 @@ main {
   background-color: #005cbf;
 }
 
-/* Menu Toggle Button (Oculto por Defecto) */
+/* Menu Toggle Button (Visible Only on Small Screens) */
 .menu-toggle {
   display: none; /* Oculto en pantallas grandes */
   background: none;
   border: none;
   cursor: pointer;
   padding: 10px;
+  position: fixed;
+  top: 15px;
+  right: 70px;
+  z-index: 1001;
 }
 
-.menu-toggle .menu-icon {
-  width: 30px; /* Ajusta el tamaño según tus necesidades */
+.menu-toggle img {
+  width: 30px; /* Ajusta el tamaño del icono */
   height: auto;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle img:hover {
+  transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -112,7 +121,7 @@ main {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 100px 20px 60px; /* Puedes ajustar este padding si es necesario */
+  padding: 100px 20px 60px; /* Ajuste de espacio para evitar superposición */
   background: linear-gradient(135deg, #1f1f1f 30%, #2a2a2a 100%);
   color: #eaeaea;
   transition: background 0.3s ease, color 0.3s ease;
@@ -256,7 +265,7 @@ body.light-mode .footer-social-icons li a:hover {
     flex-direction: column;
     background-color: #1f1f1f;
     position: absolute;
-    top: 70px; /* Debe coincidir con la altura del encabezado */
+    top: 70px;
     right: 0;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -273,7 +282,6 @@ body.light-mode .footer-social-icons li a:hover {
     opacity: 1;
   }
 
-  /* Estilo de los enlaces del menú en pantallas pequeñas */
   .menu-items a {
     padding: 15px 20px;
     border-bottom: 1px solid #333;
@@ -282,39 +290,4 @@ body.light-mode .footer-social-icons li a:hover {
   .menu-items a:last-child {
     border-bottom: none;
   }
-
-  /* Ajustes para la Hero Section en pantallas pequeñas */
-  .hero-section {
-    padding: 40px 20px;
-  }
-
-  .profile-img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .logo img {
-    height: 40px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  /* Puedes agregar estilos adicionales para pantallas aún más pequeñas si es necesario */
-}
-
-/* Transiciones Suaves para Menú Desplegable */
-.menu-items {
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-}
-
-.menu-items.active {
-  max-height: 500px; /* Asegúrate de que este valor sea suficiente para el contenido */
-  opacity: 1;
 }
