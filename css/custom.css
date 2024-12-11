@@ -1,4 +1,6 @@
 /* Enhanced Custom CSS for Aesthetic and Responsive Improvements */
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 /* General Content Styling */
 .content-table > div:first-child > div:first-child > h2:first-child {
