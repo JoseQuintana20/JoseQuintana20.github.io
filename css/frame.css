@@ -111,42 +111,60 @@ hr {
 
 /* Responsive Menu */
 @media (max-width: 768px) {
+  /* Contenedor del Menú */
   .menu-container {
     display: flex;
-    flex-direction: row; /* Asegura que los elementos estén en fila */
-    justify-content: flex-start; /* Alinear al inicio */
-    align-items: center;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;     /* Centra los elementos verticalmente */
+    position: relative;      /* Permite posicionar el botón de menú de forma absoluta */
     padding: 10px;
-    position: relative; /* Evita superposición */
+    background-color: #1f1f1f; /* Asegura que el fondo siga siendo consistente */
+    height: 70px;              /* Mantiene la altura del encabezado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el encabezado */
   }
 
+  /* Botón de Menú */
   .menu-button {
-    display: block; /* Hacer visible el botón en pantallas pequeñas */
-    position: relative; /* Cambiar a relativo para participar en el flujo de flexbox */
-    top: 0; /* Resetear posición top */
-    left: 0; /* Resetear posición left */
-    margin-right: 15px; /* Espacio entre el botón y el logo */
+    display: block;            /* Hace visible el botón en pantallas pequeñas */
+    position: absolute;        /* Posiciona el botón de menú de forma absoluta */
+    left: 20px;                /* Alinea el botón a la izquierda con un margen */
+    top: 50%;                  /* Centra verticalmente el botón */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+    z-index: 1001;             /* Asegura que el botón esté por encima de otros elementos */
+    background-color: transparent; /* Fondo transparente */
+    border: none;              /* Sin bordes */
+    cursor: pointer;           /* Cambia el cursor al pasar el mouse */
+    font-size: 24px;           /* Tamaño del ícono */
+    color: #eaeaea;            /* Color del ícono */
   }
 
+  .menu-button:hover {
+    color: #4dabf7; /* Cambia el color al pasar el cursor */
+  }
+
+  /* Logotipo Centrado */
   .menu .logo {
-    order: 2; /* El logo se mueve después del botón */
-    margin-left: 0; /* Elimina márgenes adicionales */
+    position: absolute;        /* Posiciona el logotipo de forma absoluta */
+    left: 50%;                 /* Mueve el logotipo al 50% del ancho del contenedor */
+    transform: translateX(-50%); /* Centra el logotipo horizontalmente */
+    text-align: center;        /* Alinea el texto del logotipo al centro */
   }
 
+  /* Elementos del Menú */
   .menu .menu-items {
-    display: none;
+    display: none; /* Oculta el menú por defecto */
     flex-direction: column;
     background: #343a40;
     width: 100%;
     position: absolute;
-    top: 70px;
+    top: 70px;    /* Justo debajo del encabezado */
     left: 0;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .menu .menu-items.active {
-    display: flex; /* Muestra el menú desplegable */
+    display: flex; /* Muestra el menú desplegable cuando está activo */
   }
 
   .menu-items a {
