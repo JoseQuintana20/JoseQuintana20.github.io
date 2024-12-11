@@ -25,18 +25,18 @@ body {
 .menu-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Distribuye elementos hacia extremos */
   padding: 10px 20px;
   background-color: #1f1f1f;
-  position: fixed; /* Cambiar a fixed */
+  position: fixed; /* Fija el encabezado */
   top: 0;
-  width: 100%; /* Asegurar que el encabezado ocupe todo el ancho */
-  z-index: 1000; /* Asegurar que esté encima de otros elementos */
+  width: 100%; /* Ocupa todo el ancho */
+  z-index: 1000; /* Prioridad más alta */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .container {
-  margin-top: 70px; /* Ajusta este valor según la altura del encabezado */
+  margin-top: 80px; /* Ajusta este valor para que el contenido no quede debajo del encabezado */
 }
 
 .logo {
@@ -58,7 +58,9 @@ body {
 /* Navigation Menu */
 .menu-items {
   display: flex;
-  margin-right: 50px; /* Ensure spacing from button */
+  justify-content: center; /* Centra el menú */
+  flex: 1; /* Expande el espacio para centrar los elementos */
+  gap: 20px;
 }
 
 .menu-items a {
@@ -167,11 +169,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 10px; /* Adjust spacing from logo */
-  position: fixed; /* Ensure button stays visible */
+  position: fixed;
   top: 15px;
   right: 15px;
-  z-index: 1000; /* Ensure button is on top */
+  z-index: 1000;
   transition: background-color 0.3s ease;
 }
 
@@ -267,18 +268,5 @@ body.light-mode .footer-social-icons li a:hover {
 
   .logo img {
     height: 40px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    margin-top: 80px; /* Ajustar según la altura del encabezado en móvil */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .theme-toggle {
-    top: 10px;
-    right: 10px;
   }
 }
