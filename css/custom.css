@@ -25,19 +25,19 @@ body {
 .menu-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distribuye elementos */
+  justify-content: space-between;
   padding: 10px 20px;
   background-color: #1f1f1f;
-  position: fixed; /* Fija el encabezado */
+  position: fixed;
   top: 0;
-  width: 100%; /* Ocupa todo el ancho */
-  z-index: 1000; /* Prioridad más alta */
+  width: 100%;
+  z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 70px; /* Establece una altura fija del encabezado */
+  height: 70px;
 }
 
 .container {
-  margin-top: 70px; /* Asegúrate que coincida con la altura del encabezado */
+  margin-top: 70px; /* Asegura que el contenido no quede cubierto */
 }
 
 .logo {
@@ -59,8 +59,8 @@ body {
 /* Navigation Menu */
 .menu-items {
   display: flex;
-  justify-content: center; /* Centra el menú */
-  flex: 1; /* Expande el espacio para centrar los elementos */
+  justify-content: center;
+  flex: 1;
   gap: 20px;
 }
 
@@ -84,7 +84,7 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 60px 20px;
+  padding: 100px 20px; /* Asegura espacio suficiente debajo del encabezado */
   background: linear-gradient(135deg, #1f1f1f 30%, #2a2a2a 100%);
   color: #eaeaea;
   transition: background 0.3s ease, color 0.3s ease;
@@ -173,7 +173,7 @@ body {
   position: fixed;
   top: 15px;
   right: 15px;
-  z-index: 1000;
+  z-index: 1001; /* Asegura que esté siempre encima */
   transition: background-color 0.3s ease;
 }
 
