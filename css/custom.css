@@ -1,6 +1,5 @@
 /* Enhanced Custom CSS for Aesthetic and Responsive Improvements */
 @import url(https://fonts.googleapis.com/css?family=Lato);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 /* General Content Styling */
 body {
@@ -11,14 +10,10 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.content-table > div:first-child > div:first-child > h2:first-child {
-  margin-top: 0;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 10px;
-  text-align: center;
+header::after {
+  content: '';
+  display: block;
+  height: 70px; /* Reservamos espacio para el encabezado */
 }
 
 /* Header and Logo */
@@ -34,10 +29,6 @@ body {
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 70px;
-}
-
-.container {
-  margin-top: 80px; /* Ajusta para evitar que el contenido se superponga con el encabezado */
 }
 
 .logo {
@@ -84,7 +75,7 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 100px 20px;
+  padding: 100px 20px 60px; /* Espaciado inferior adicional */
   background: linear-gradient(135deg, #1f1f1f 30%, #2a2a2a 100%);
   color: #eaeaea;
   transition: background 0.3s ease, color 0.3s ease;
@@ -96,24 +87,11 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 3rem); /* Ajuste fluido para diferentes tamaños de pantalla */
   line-height: 1.2;
-  word-wrap: break-word; /* Asegura que el texto no se salga del contenedor */
-  margin: 0;
-  padding: 10px;
+  word-wrap: break-word;
+  margin: 0 0 10px;
   text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
-  }
 }
 
 .profile-img {
