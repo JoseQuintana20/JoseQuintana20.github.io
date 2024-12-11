@@ -33,9 +33,13 @@ body {
   z-index: 1000;
 }
 
-.logo-image {
-  width: 120px;
-  height: auto;
+/* Logo Styling */
+.logo {
+  width: auto; /* Ajusta automáticamente la anchura basada en la altura */
+  height: 50px; /* Tamaño estándar para barras de navegación */
+  object-fit: contain; /* Asegura que el logo no se deforme */
+  display: inline-block;
+  margin-right: 20px; /* Espaciado entre logo y los elementos del menú */
 }
 
 .menu-items {
@@ -52,6 +56,23 @@ body {
 }
 
 .menu-items a:hover {
+  color: #4dabf7;
+}
+
+.menu-container .menu-items {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-container .menu-items a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.menu-container .menu-items a:hover {
   color: #4dabf7;
 }
 
