@@ -31,7 +31,22 @@
 }
 
 .menu .menu-button {
-  display: none;
+  display: block;
+  position: fixed; /* Fija el botón en la pantalla */
+  top: 15px; /* Espacio desde la parte superior */
+  right: 15px; /* Espacio desde la derecha */
+  z-index: 1001; /* Asegura que esté por encima de otros elementos */
+  cursor: pointer;
+}
+
+.menu .menu-button img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.menu .menu-button:hover img {
+  transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
 }
 
 .social-links {
