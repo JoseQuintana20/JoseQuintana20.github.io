@@ -132,7 +132,7 @@ hr {
 .menu-button {
   position: fixed; /* Mantiene el botón siempre visible */
   top: 20px; /* Ajustar la distancia desde la parte superior */
-  left: 10px; /* Moverlo hacia la izquierda */
+  left: 30x; /* Moverlo hacia la izquierda */
   z-index: 1001; /* Asegura que esté por encima de otros elementos */
   background-color: transparent; /* Fondo transparente */
   border: none; /* Sin bordes */
