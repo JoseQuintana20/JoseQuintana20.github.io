@@ -20,21 +20,29 @@
   
   <!-- Theme Toggle Script -->
   <script>
-    function toggleTheme() {
-      const body = document.body;
-      body.classList.toggle('light-mode');
-  
-      // Save user preference in localStorage
-      const isLightMode = body.classList.contains('light-mode');
-      localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
-    }
-  
-    // Apply saved theme on page load
     document.addEventListener('DOMContentLoaded', () => {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'light') {
-        document.body.classList.add('light-mode');
+      const body = document.body;
+      const themeToggle = document.querySelector(".theme-toggle");
+      const icon = themeToggle.querySelector("i");
+
+      // Apply saved theme
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        body.classList.add("light-mode");
+        icon.classList.replace("fa-moon", "fa-sun");
       }
+
+      // Theme toggle
+      themeToggle.addEventListener("click", () => {
+        const isLightMode = body.classList.toggle("light-mode");
+        if (isLightMode) {
+          icon.classList.replace("fa-moon", "fa-sun");
+          localStorage.setItem("theme", "light");
+        } else {
+          icon.classList.replace("fa-sun", "fa-moon");
+          localStorage.setItem("theme", "dark");
+        }
+      });
     });
   </script>
 </head>
@@ -59,9 +67,10 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
+      
       <!-- Theme Toggle Button -->
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
-        <i class="fas fa-adjust"></i>
+      <button class="theme-toggle" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i> <!-- Initial icon is a moon -->
       </button>
       
       <!-- Mobile Menu Button -->
