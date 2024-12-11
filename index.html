@@ -152,21 +152,36 @@
         </ul>
       </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-content">
-        <p>&copy; 2024 Jose Quintana. All Rights Reserved.</p>
-        <div class="footer-social-icons">
-          <ul class="social-icons">
-            <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-          </ul>
-        </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Jose Quintana. All Rights Reserved.</p>
+      <div class="footer-social-icons">
+        <ul class="social-icons">
+          <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
+
+  <!-- Theme Toggle Button (si se necesita adicional) -->
+  <!-- Ya está incluido en el encabezado -->
+
+  <!-- Script para Manejar el Menú Móvil -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.querySelector('.menu-button');
+      const menuItems = document.querySelector('.menu-items');
+      
+      menuButton.addEventListener('click', function() {
+        menuItems.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 
 </html>
