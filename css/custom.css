@@ -245,11 +245,13 @@ body.light-mode .footer {
   margin: 20px auto;
 }
 
-ul.social-icons {
-  padding: 0;
-  list-style: none;
+/* Social Media Icons in Hero Section */
+.social-icons {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 
 .social-icons li {
@@ -257,14 +259,15 @@ ul.social-icons {
 }
 
 .social-icons a {
-  color: #fff;
-  font-size: 1.5rem;
+  font-size: 2rem; /* Icon size */
+  color: #eaeaea;
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
   color: #4dabf7;
 }
+
 
 .fa-facebook:hover {
   color: #3d5b99;
