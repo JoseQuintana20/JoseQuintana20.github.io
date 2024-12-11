@@ -14,20 +14,21 @@
 
 /* Profile Image Styling */
 .profile-picture {
-  width: 150px; /* Adjust as necessary */
-  height: 150px; /* Make it a perfect square */
-  border-radius: 50%; /* This creates the circular effect */
-  border: 3px solid #333; /* Optional: Add a border */
-  object-fit: cover; /* Ensures the image fits nicely */
-  margin: 0 auto; /* Centers the image */
-  display: block; /* Centers the image as block element */
+  width: 150px; /* Image size */
+  height: 150px; /* Make it square */
+  border-radius: 50%; /* Makes it circular */
+  border: 3px solid #333; /* Optional border */
+  object-fit: cover; /* Ensures the image fills the circle */
+  display: block; /* For centering with margin auto */
+  margin: 0 auto; /* Centers the image horizontally */
 }
 
+
 .menu-button img {
-  width: 30px; /* Adjust as needed */
-  height: 30px; /* Keep it square */
-  object-fit: contain; /* Ensures the image scales correctly */
-  display: block; /* Ensures proper layout */
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
 }
 
 
