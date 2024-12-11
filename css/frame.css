@@ -13,10 +13,6 @@ html, body {
   overflow-x: hidden;
 }
 
-strong, b {
-  font-weight: bold;
-}
-
 a {
   outline: none;
   cursor: pointer;
@@ -29,11 +25,6 @@ a:hover {
 }
 
 img, video {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   max-width: 100%;
   height: auto;
@@ -50,27 +41,10 @@ h1 {
   font-size: 2rem;
 }
 
-h2 {
-  font-size: 1.75rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
 p {
   font-size: 1rem;
   line-height: 1.6;
   color: #495057;
-}
-
-ul, ol {
-  margin: 15px 0;
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 5px;
 }
 
 hr {
@@ -80,125 +54,96 @@ hr {
   margin: 20px 0;
 }
 
-/* Unificar estilos de .menu-container con custom.css */
+/* Menu Container */
 .menu-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px; /* Alinear con custom.css */
-  background-color: #1f1f1f; /* Alinear color de fondo */
-  position: fixed; /* Cambiar a fixed */
+  padding: 10px 20px;
+  background-color: #1f1f1f;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Aumentar z-index para estar por encima de otros elementos */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Alinear box-shadow */
-  height: 70px; /* Definir altura consistente */
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+
+.menu .menu-items {
+  display: flex;
+  gap: 15px;
 }
 
 .menu .menu-items a {
   color: rgba(255, 255, 255, 0.8);
   padding: 10px 15px;
+  transition: color 0.3s ease;
 }
 
-.menu {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.menu .menu-items a:hover {
+  color: #ffffff;
 }
 
 .menu .logo a {
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: bold;
-  padding: 10px 0;
   text-transform: uppercase;
 }
 
-.menu .menu-items > a {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
-  padding: 10px 15px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.menu .menu-items > a:hover {
-  color: #ffffff;
-}
-
+/* Mobile Menu Button */
 .menu-button {
-  display: none; /* Ocultar por defecto */
-  position: absolute; /* Cambia a absolute para posicionarlo relativo a su contenedor */
-  top: 20px; /* Ajusta la distancia desde la parte superior */
-  left: 10px; /* Ajusta la distancia desde el lado izquierdo */
-  z-index: 1001; /* Asegura que esté sobre otros elementos */
-  background-color: transparent; /* Fondo transparente */
-  border: none; /* Sin bordes */
-  cursor: pointer; /* Cambia el cursor al pasar el mouse */
-  font-size: 24px; /* Tamaño del ícono */
-  color: #eaeaea; /* Color del ícono */
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  z-index: 1001;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #eaeaea;
 }
 
 .menu-button:hover {
-  color: #4dabf7; /* Cambia el color al pasar el cursor */
+  color: #4dabf7;
 }
 
+/* Responsive Menu */
 @media (max-width: 768px) {
   .menu-container {
-    display: flex;
-    flex-direction: row; /* Asegura que los elementos estén en fila */
-    justify-content: space-between; /* Espaciado adecuado */
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 10px;
-    position: relative; /* Evita superposición */
   }
 
   .menu-button {
-    display: block; /* Hacer visible el botón en pantallas pequeñas */
-    margin-left: 20px; /* Ajustar separación con respecto al logo */
+    display: block;
   }
 
   .menu .logo {
-    order: 2; /* El logo se mueve después del botón */
-    margin-left: 0; /* Elimina márgenes adicionales */
+    order: 2;
   }
 
   .menu-items {
-    display: none; /* Oculta el menú por defecto */
-    flex-direction: column; /* Alinea los elementos del menú en columna */
-    position: absolute; /* Posiciona el menú relativo al botón */
-    top: 70px; /* Justo debajo del header */
-    left: 0;
-    width: 100%; /* Ancho completo */
-    background: #343a40; /* Fondo oscuro para el menú desplegable */
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .menu .menu-items {
     display: none;
     flex-direction: column;
-    background: #343a40;
-    width: 100%;
     position: absolute;
     top: 70px;
     left: 0;
+    width: 100%;
+    background: #343a40;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .menu .menu-items.active {
-    display: flex; /* Muestra el menú desplegable */
+  .menu-items.active {
+    display: flex;
   }
 
   .menu-items a {
-    color: rgba(255, 255, 255, 0.8);
     padding: 10px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    text-decoration: none;
   }
 
   .menu-items a:hover {
@@ -206,43 +151,7 @@ hr {
   }
 }
 
-/* Banner */
-.banner {
-  background-color: #007bff;
-  color: #ffffff;
-  padding: 40px 20px; /* Adjust padding for more spacing */
-  text-align: center;
-  width: 100%; /* Ensure the banner spans the entire width */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers content horizontally */
-  justify-content: center; /* Centers content vertically */
-}
-
-.banner h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.banner p {
-  font-size: 1.2rem;
-}
-
-/* Adjust the responsiveness for mobile */
-@media (max-width: 576px) {
-  .banner {
-    padding: 20px 10px; /* Adjust padding for small screens */
-  }
-
-  .banner h1 {
-    font-size: 1.8rem;
-  }
-
-  .banner p {
-    font-size: 1rem;
-  }
-}
-
+/* Hero Section */
 .hero {
   display: flex;
   justify-content: center;
@@ -253,14 +162,6 @@ hr {
   text-align: center;
 }
 
-.hero img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 /* Content Container */
 .content-container {
   max-width: 1200px;
@@ -268,116 +169,10 @@ hr {
   padding: 20px;
 }
 
-.content p a {
-  color: #007bff;
-}
-
-.content p a:hover {
-  text-decoration: underline;
-}
-
-/* Table Styling */
-.content-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
-
-.content-table th, .content-table td {
-  border: 1px solid #dee2e6;
-  padding: 10px 15px;
-  text-align: left;
-}
-
-.content-table th {
-  background-color: #343a40;
-  color: #ffffff;
-}
-
-.content-table tr:nth-child(even) {
-  background-color: #f8f9fa;
-}
-
-/* Flexbox Utilities */
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-/* Images and Media */
-.image {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  border-radius: 5px;
-  margin: 20px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.image img {
-  border-radius: 5px;
-}
-
-.scrollable-image-container {
-  overflow-x: auto;
-  margin: 15px 0;
-}
-
-.scrollable-image-container img {
-  border-radius: 5px;
-}
-
-/* Buttons */
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.button:hover {
-  background-color: #0056b3;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 /* Responsive Design */
 @media (max-width: 992px) {
   .content-container {
     padding: 15px;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .banner h1 {
-    font-size: 1.8rem;
-  }
-
-  .banner p {
-    font-size: 1rem;
   }
 }
 
