@@ -53,25 +53,25 @@ main {
 /* Navigation Menu */
 .menu-items {
   display: flex;
-  justify-content: center;
-  flex: 1;
-  gap: 20px;
+  flex-direction: row; /* Ajuste para dispositivos más grandes */
+  gap: 15px;
+  padding: 10px;
 }
 
 .menu-items a {
-  text-decoration: none;
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
-  padding: 10px 15px;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .menu-items a:hover {
   color: #4dabf7;
-  border-bottom: 2px solid #4dabf7;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Active Menu Items */
 .menu-items a.active {
   color: #4dabf7;
   border-bottom: 2px solid #4dabf7;
@@ -260,12 +260,20 @@ body.light-mode .footer {
   color: #333;
 }
 
+/* Light Mode for Menu Items */
 body.light-mode .menu-items a {
   color: #333;
+  background-color: transparent;
 }
 
 body.light-mode .menu-items a:hover {
   color: #007bff;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .menu-items a.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
 }
 
 /* Responsive Design */
