@@ -14,9 +14,31 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script>
     function toggleTheme() {
-      document.body.classList.toggle('light-mode');
+      const body = document.body;
+      body.classList.toggle('light-mode');
+  
+      const isLightMode = body.classList.contains('light-mode');
+  
+      // Guarda la preferencia del tema en localStorage
+      localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+  
+      // Ajusta los estilos globales adicionales si es necesario
+      const allSections = document.querySelectorAll('.content-container, .hero-section, .footer');
+      allSections.forEach((section) => {
+        section.style.backgroundColor = isLightMode ? '#ffffff' : '#1f1f1f';
+        section.style.color = isLightMode ? '#333333' : '#eaeaea';
+      });
     }
+  
+    // Aplica la preferencia de tema guardada
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+      }
+    });
   </script>
+
 </head>
 
 <body>
