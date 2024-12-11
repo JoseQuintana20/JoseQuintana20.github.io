@@ -276,6 +276,15 @@ body.light-mode .menu-items a.active {
   border-bottom: 2px solid #007bff;
 }
 
+/* Social Icons - Light Mode */
+body.light-mode .social-icons li a {
+  color: #333; /* Color en tema claro */
+}
+
+body.light-mode .social-icons li a:hover {
+  color: #007bff; /* Hover en tema claro */
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .menu-items {
