@@ -275,3 +275,10 @@ body.light-mode .footer-social-icons li a:hover {
     margin-top: 80px; /* Ajustar según la altura del encabezado en móvil */
   }
 }
+
+@media screen and (max-width: 768px) {
+  .theme-toggle {
+    top: 10px;
+    right: 10px;
+  }
+}
