@@ -10,61 +10,58 @@
   color: #333;
   border-bottom: 2px solid #007bff;
   padding-bottom: 10px;
+  text-align: center; /* Centers section headers */
 }
 
-/* Profile Image Styling */
-.profile-picture {
-  width: 150px; /* Image size */
-  height: 150px; /* Make it square */
-  border-radius: 50%; /* Makes it circular */
-  border: 3px solid #333; /* Optional border */
-  object-fit: cover; /* Ensures the image fills the circle */
-  display: block; /* For centering with margin auto */
-  margin: 0 auto; /* Centers the image horizontally */
-}
-
-
-.menu-button img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  display: block;
-}
-
+/* Hero Section */
 .hero-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; /* Ensures text is centered */
-  margin: 0 auto; /* Centers the content horizontally */
-  padding: 20px 10px; /* Adds space around the content */
+  flex-direction: column; /* Stacks content vertically */
+  text-align: center; /* Centers text content */
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1f1f1f 30%, #2a2a2a 100%);
+  color: #eaeaea;
 }
 
 .hero-content {
-  max-width: 800px; /* Restrict the width for consistent layout */
-  margin: 0 auto; /* Center the content block */
+  max-width: 800px; /* Restricts content width */
+  margin: 0 auto;
 }
 
 .center-text {
-  text-align: center; /* Aligns text centrally within the hero-content */
+  text-align: center; /* Ensures text alignment */
 }
 
 .profile-picture {
-  margin-bottom: 20px; /* Adds spacing below the image */
+  width: 150px; /* Sets profile image size */
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #4dabf7;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto; /* Centers the image */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a shadow */
 }
 
-
-
-/* Flex Item Adjustments */
-.flex-item-stretch-6 {
-  flex: 1 1 auto;
+/* Navbar */
+.menu-container {
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
 }
 
-/* Maximum Width for Content */
-.max-width-600 {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
+.menu-container a {
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.menu-container a:hover {
+  color: #4dabf7;
 }
 
 /* Typography Enhancements */
@@ -72,30 +69,42 @@ h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #005cbf;
+  color: #4dabf7;
 }
 
 h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #333;
+  color: #eaeaea;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #555;
+  color: #eaeaea;
 }
 
 a {
-  color: #007bff;
+  color: #4dabf7;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #005cbf;
+  color: #82cfff;
   text-decoration: underline;
+}
+
+/* Section Spacing */
+.content-container {
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
 }
 
 /* Button Enhancements */
@@ -116,64 +125,39 @@ a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Table Styling */
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 1rem;
-  color: #333;
+/* Footer */
+.footer {
+  background-color: #1f1f1f;
+  color: #eaeaea;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
 }
 
-.table th,
-.table td {
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-.table th {
-  background-color: #007bff;
-  color: white;
+.footer a {
+  color: #4dabf7;
+  text-decoration: none;
   font-weight: bold;
 }
 
-.table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Card Components */
-.card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 20px 0;
-}
-
-.card h3 {
-  margin-top: 0;
-}
-
-.card p {
-  margin-bottom: 0;
+.footer a:hover {
+  color: #82cfff;
 }
 
 /* Responsive Design */
 @media screen and (min-width: 900px) {
-  .flex-item-stretch-6 {
-    flex: 5.5;
+  .hero-section {
+    padding: 60px 20px;
+  }
+
+  .content-container {
+    padding: 50px 30px;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .content-table {
-    padding: 20px;
-  }
-
-  #me {
-    width: 150px;
-    height: 150px;
+  .hero-content {
+    max-width: 600px;
   }
 
   h2 {
@@ -190,13 +174,8 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
-  .content-table {
-    padding: 15px;
-  }
-
-  #me {
-    width: 120px;
-    height: 120px;
+  .hero-content {
+    padding: 20px;
   }
 
   h2 {
@@ -215,17 +194,4 @@ a:hover {
     font-size: 0.9rem;
     padding: 8px 16px;
   }
-}
-
-/* Section Spacing */
-.section {
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Highlighted Text */
-.highlight {
-  color: #dc3545;
-  font-weight: bold;
 }
