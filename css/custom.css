@@ -31,6 +31,29 @@
   display: block;
 }
 
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Ensures text is centered */
+  margin: 0 auto; /* Centers the content horizontally */
+  padding: 20px 10px; /* Adds space around the content */
+}
+
+.hero-content {
+  max-width: 800px; /* Restrict the width for consistent layout */
+  margin: 0 auto; /* Center the content block */
+}
+
+.center-text {
+  text-align: center; /* Aligns text centrally within the hero-content */
+}
+
+.profile-picture {
+  margin-bottom: 20px; /* Adds spacing below the image */
+}
+
+
 
 /* Flex Item Adjustments */
 .flex-item-stretch-6 {
