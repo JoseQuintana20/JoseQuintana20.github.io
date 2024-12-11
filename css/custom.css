@@ -31,6 +31,10 @@ header::after {
   height: 70px;
 }
 
+main {
+  padding-top: 70px; /* Altura del encabezado */
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -75,7 +79,7 @@ header::after {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 100px 20px 60px; /* Espaciado inferior adicional */
+  padding: 100px 20px 60px; /* Puedes ajustar este padding si es necesario */
   background: linear-gradient(135deg, #1f1f1f 30%, #2a2a2a 100%);
   color: #eaeaea;
   transition: background 0.3s ease, color 0.3s ease;
