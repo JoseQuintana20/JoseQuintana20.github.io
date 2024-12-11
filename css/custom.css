@@ -198,9 +198,44 @@ body.light-mode .menu-items a:hover {
   color: #007bff;
 }
 
-body.light-mode .hero-section {
+/* Light Mode for Hero Section */
+body.light-mode .hero {
   background: linear-gradient(135deg, #ffffff 30%, #f9f9f9 100%);
   color: #333;
+}
+
+body.light-mode .hero h1 {
+  color: #222;
+}
+
+body.light-mode .hero-subtitle {
+  color: #555;
+}
+
+body.light-mode .hero .social-icons li a {
+  color: #333;
+}
+
+body.light-mode .hero .social-icons li a:hover {
+  color: #007bff;
+}
+
+/* Light Mode for About Section */
+body.light-mode #about {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.light-mode #about h2 {
+  color: #222;
+}
+
+body.light-mode #about p {
+  color: #555;
+}
+
+body.light-mode #about hr {
+  background: #ccc;
 }
 
 body.light-mode .profile-img {
