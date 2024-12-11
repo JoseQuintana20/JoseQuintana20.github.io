@@ -23,6 +23,13 @@
   display: block; /* Centers the image as block element */
 }
 
+.menu-button img {
+  width: 30px; /* Adjust as needed */
+  height: 30px; /* Keep it square */
+  object-fit: contain; /* Ensures the image scales correctly */
+  display: block; /* Ensures proper layout */
+}
+
 
 /* Flex Item Adjustments */
 .flex-item-stretch-6 {
