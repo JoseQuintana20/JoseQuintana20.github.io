@@ -10,11 +10,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-header::after {
-  content: '';
-  display: block;
-  height: 70px; /* Reservamos espacio para el encabezado */
-}
 
 /* Header and Logo */
 .menu-container {
