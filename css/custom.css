@@ -35,29 +35,35 @@ body {
 
 /* Logo Styling */
 .logo {
-  width: auto; /* Ajusta automáticamente la anchura basada en la altura */
-  height: 50px; /* Tamaño estándar para barras de navegación */
-  object-fit: contain; /* Asegura que el logo no se deforme */
-  display: inline-block;
-  margin-right: 20px; /* Espaciado entre logo y los elementos del menú */
+  display: flex;
+  align-items: center;
 }
 
+.logo-image {
+  height: 50px; /* Asegura una altura consistente */
+  width: auto; /* Mantiene las proporciones originales */
+  margin-right: 20px; /* Espaciado entre logo y menú */
+}
+
+/* Navigation Menu */
 .menu-items {
   display: flex;
-  gap: 20px;
+  gap: 15px; /* Espaciado entre los enlaces */
 }
 
 .menu-items a {
-  color: #ffffff;
-  font-weight: bold;
   text-decoration: none;
-  padding: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
   transition: color 0.3s ease;
 }
 
 .menu-items a:hover {
   color: #4dabf7;
 }
+
 
 .menu-container .menu-items {
   display: flex;
