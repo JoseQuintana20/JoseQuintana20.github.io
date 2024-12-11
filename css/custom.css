@@ -28,10 +28,15 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
   background-color: #1f1f1f;
-  position: sticky;
+  position: fixed; /* Cambiar a fixed */
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+  width: 100%; /* Asegurar que el encabezado ocupe todo el ancho */
+  z-index: 1000; /* Asegurar que esté encima de otros elementos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  margin-top: 70px; /* Ajusta este valor según la altura del encabezado */
 }
 
 .logo {
@@ -262,5 +267,11 @@ body.light-mode .footer-social-icons li a:hover {
 
   .logo img {
     height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 80px; /* Ajustar según la altura del encabezado en móvil */
   }
 }
