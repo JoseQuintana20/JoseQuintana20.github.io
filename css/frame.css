@@ -130,14 +130,14 @@ hr {
 }
 
 .menu-button {
-  position: fixed; /* Fija el botón en la pantalla */
-  top: 15px; /* Espacio desde la parte superior */
-  right: 15px; /* Espacio desde la derecha */
+  position: fixed; /* Mantiene el botón siempre visible */
+  top: 20px; /* Ajustar la distancia desde la parte superior */
+  left: 10px; /* Moverlo hacia la izquierda */
   z-index: 1001; /* Asegura que esté por encima de otros elementos */
   background-color: transparent; /* Fondo transparente */
-  border: none; /* Elimina bordes */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  font-size: 24px; /* Ajusta el tamaño del ícono */
+  border: none; /* Sin bordes */
+  cursor: pointer; /* Cambia el cursor cuando pasa el mouse */
+  font-size: 24px; /* Tamaño del icono */
   color: #eaeaea; /* Color del ícono */
 }
 
