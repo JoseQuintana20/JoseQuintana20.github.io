@@ -37,21 +37,23 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 10px;
 }
 
 .logo img {
-  height: 50px; /* Ajusta la altura del logo */
-  width: auto; /* Mantén las proporciones */
-  max-width: 100px; /* Establece un límite para evitar que sea demasiado grande */
+  height: 50px; /* Ajustar tamaño del logo */
+  width: auto;
+  max-width: 100px;
+  transition: transform 0.3s ease;
 }
 
+.logo img:hover {
+  transform: scale(1.1);
+}
 
 /* Navigation Menu */
 .menu-items {
   display: flex;
-  gap: 15px; /* Espaciado entre los enlaces */
+  gap: 15px;
 }
 
 .menu-items a {
@@ -64,24 +66,6 @@ body {
 }
 
 .menu-items a:hover {
-  color: #4dabf7;
-}
-
-
-.menu-container .menu-items {
-  display: flex;
-  gap: 20px;
-}
-
-.menu-container .menu-items a {
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 10px;
-  transition: color 0.3s ease;
-}
-
-.menu-container .menu-items a:hover {
   color: #4dabf7;
 }
 
@@ -163,7 +147,7 @@ body {
   color: #4dabf7;
 }
 
-/* Button Enhancements */
+/* Theme Toggle Button */
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -221,5 +205,9 @@ body {
 
   .hero-subtitle {
     font-size: 1rem;
+  }
+
+  .logo img {
+    height: 40px;
   }
 }
