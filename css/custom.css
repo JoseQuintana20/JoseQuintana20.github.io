@@ -223,7 +223,8 @@ h1:hover {
 .hero-subtitle {
   margin-top: 10px;
   font-size: 1.2rem;
-  transition: color 0.3s ease;
+  color: #eaeaea; /* Default color for dark mode */
+  transition: color 0.3s ease; /* Smooth transition for color */
 }
 
 .hero-subtitle:hover {
@@ -406,14 +407,22 @@ body.light-mode #about {
   color: #333;
 }
 
+/* Hero Section Title and Subtitle - Light Mode */
 body.light-mode h1 {
-  color: #007bff; /* Cambia el color del título en modo claro */
+  color: #555; /* Gray color for light mode */
+}
+
+body.light-mode h1:hover {
+  color: #007bff; /* Bright blue on hover for light mode */
 }
 
 body.light-mode .hero-subtitle {
-  color: #555; /* Cambia el color del subtítulo en modo claro */
+  color: #666; /* Slightly darker gray for subtitle in light mode */
 }
 
+body.light-mode .hero-subtitle:hover {
+  color: #007bff; /* Bright blue on hover for light mode */
+}
 body.light-mode #about h2,
 body.light-mode #about p {
   color: #555;
