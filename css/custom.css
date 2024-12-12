@@ -295,6 +295,7 @@ h1:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   background-color: #2d2d2d;
+  border: 1px solid #4dabf7;
 }
 
 /* Modo oscuro: títulos h2 en todas las secciones */
