@@ -131,10 +131,21 @@ Hover effects add interactivity and guide user actions. Subtle animations and co
 3. **Section Containers:**
 
 - Hovering over containers creates an elevation effect with shadows and background changes.
-```css
-.content-container:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  background-color: #3a3a3a;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
+  ```css
+  .content-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #3a3a3a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+4. **Navigation Links:**
+   - Links show a color transition and underline animation on hover.
+   ```css
+   .menu-items a:hover {
+     color: #4dabf7;
+   }
+
+   .menu-items a:hover::after {
+     width: 100%;
+     transition: width 0.3s ease;
+   }
