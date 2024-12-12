@@ -149,3 +149,12 @@ Hover effects add interactivity and guide user actions. Subtle animations and co
      width: 100%;
      transition: width 0.3s ease;
    }
+5. **Profile Image:**
+   - The profile image in the hero section scales slightly and adds a glowing effect.
+
+   ```css
+   .profile-img:hover {
+     transform: scale(1.05);
+     box-shadow: 0 0 20px 4px #4dabf7;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+   }
