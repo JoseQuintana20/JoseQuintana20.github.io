@@ -325,23 +325,23 @@ h1:hover {
 }
 
 /* Project Section*/
-/* Default icon color in dark mode */
+/* Iconos en modo oscuro */
 #projects .fab {
-  color: #eaeaea; /* Light gray for dark mode */
-  transition: color 0.3s ease; /* Smooth transition */
+  color: #eaeaea; /* Color predeterminado en modo oscuro */
+  transition: color 0.3s ease; /* Transición suave */
 }
 
 #projects .fab:hover {
-  color: #4dabf7; /* Light blue on hover */
+  color: #4dabf7; /* Cambia a azul claro al hacer hover */
 }
 
-/* Light mode adjustments for project icons */
+/* Iconos en modo claro */
 body.light-mode #projects .fab {
-  color: #333; /* Dark gray for light mode */
+  color: #333; /* Color predeterminado en modo claro */
 }
 
 body.light-mode #projects .fab:hover {
-  color: #007bff; /* Bright blue on hover in light mode */
+  color: #007bff; /* Cambia a azul brillante al hacer hover */
 }
 
 
