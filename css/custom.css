@@ -385,6 +385,14 @@ body.light-mode #about {
   color: #333;
 }
 
+body.light-mode h1 {
+  color: #007bff; /* Cambia el color del título en modo claro */
+}
+
+body.light-mode .hero-subtitle {
+  color: #555; /* Cambia el color del subtítulo en modo claro */
+}
+
 body.light-mode #about h2,
 body.light-mode #about p {
   color: #555;
