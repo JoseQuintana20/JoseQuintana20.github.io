@@ -158,3 +158,27 @@ Hover effects add interactivity and guide user actions. Subtle animations and co
      box-shadow: 0 0 20px 4px #4dabf7;
      transition: transform 0.3s ease, box-shadow 0.3s ease;
    }
+6. **Footer Social Icons:**
+   - Icons in the footer scale and change color on hover for consistent interactivity.
+   ```css
+   .footer-social-icons .social-icons li a:hover {
+     color: #4dabf7;
+     transform: scale(1.2);
+     transition: transform 0.3s ease, color 0.3s ease;
+   }
+
+## Dark and Light Modes
+
+### Purpose
+
+Dark and light modes allow users to customize their viewing experience based on preference or lighting conditions, improving usability and accessibility.
+
+### Implementation
+
+1. **Dark Mode:**
+   - Default theme with dark backgrounds and light text for a modern and professional look.
+   ```css
+   body {
+     background-color: #1f1f1f;
+     color: #eaeaea;
+   }
