@@ -323,6 +323,27 @@ h1:hover {
   color: #ffffff;
 }
 
+/* Project Section*/
+/* Default icon color in dark mode */
+#projects .fab {
+  color: #eaeaea; /* Light gray for dark mode */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+#projects .fab:hover {
+  color: #4dabf7; /* Light blue on hover */
+}
+
+/* Light mode adjustments for project icons */
+body.light-mode #projects .fab {
+  color: #333; /* Dark gray for light mode */
+}
+
+body.light-mode #projects .fab:hover {
+  color: #007bff; /* Bright blue on hover in light mode */
+}
+
+
 /* Footer */
 .footer {
   background-color: #1f1f1f;
