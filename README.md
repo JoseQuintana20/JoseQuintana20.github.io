@@ -52,12 +52,12 @@ The chosen color palette creates a balance between professionalism, elegance, an
 - Icons use scaling and brightness adjustments to provide a visual cue for interaction.
    ```css
      h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    line-height: 1.2;
-    text-align: center;
-    color: #eaeaea;
-    transition: color 0.3s ease;
-  }
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.2;
+      text-align: center;
+      color: #eaeaea;
+      transition: color 0.3s ease;
+    }
 
    h1:hover {
     color: #4dabf7;
