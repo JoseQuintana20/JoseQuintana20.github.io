@@ -297,6 +297,26 @@ h1:hover {
   background-color: #3a3a3a;
 }
 
+/* Modo oscuro: títulos h2 en todas las secciones */
+.content-container h2 {
+  color: #eaeaea; /* Color más visible en modo oscuro */
+  transition: color 0.3s ease; /* Transición suave para hover */
+}
+
+.content-container h2:hover {
+  color: #4dabf7; /* Azul claro al pasar el cursor */
+}
+
+/* Modo claro: títulos h2 en todas las secciones */
+body.light-mode .content-container h2 {
+  color: #333; /* Gris oscuro en modo claro */
+  transition: color 0.3s ease; /* Transición suave para hover */
+}
+
+body.light-mode .content-container h2:hover {
+  color: #007bff; /* Azul brillante al pasar el cursor */
+}
+
 /* About Section */
 #about {
   background-color: #2a2a2a;
