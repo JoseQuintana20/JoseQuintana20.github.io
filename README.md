@@ -182,3 +182,11 @@ Dark and light modes allow users to customize their viewing experience based on 
      background-color: #1f1f1f;
      color: #eaeaea;
    }
+2. **Light Mode:**
+
+   Bright theme with white backgrounds and dark text for better visibility in well-lit environments.
+   ```css
+   body.light-mode {
+     background-color: #f9f9f9;
+     color: #333;
+   }
