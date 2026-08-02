@@ -1,587 +1,1281 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="utf-8">
-  <title>Jose Quintana</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic profile of Jose Quintana - Electronics Engineer and Master's Student in Electrical Engineering">
-  
-  <!-- CSS Links -->
-  <link href="css/frame.css" rel="stylesheet" type="text/css" />
-  <link href="css/controls.css" rel="stylesheet" type="text/css" />
-  <link href="css/custom.css" rel="stylesheet" type="text/css" />
-  
-  <!-- Font Awesome for Social Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  
-  <!-- Theme Toggle Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const body = document.body;
-      const themeToggle = document.querySelector(".theme-toggle");
-      const icon = themeToggle.querySelector("i");
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
-      // Apply saved theme
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme === "light") {
-        body.classList.add("light-mode");
-        icon.classList.replace("fa-moon", "fa-sun");
+  <title>
+    José Daniel Quintana Fuentes | AI, Data Science and Autonomous Systems
+  </title>
+
+  <meta
+    name="description"
+    content="Professional portfolio of José Daniel Quintana Fuentes, Electronics Engineer, M.Sc. in Electrical Engineering, Artificial Intelligence and Data Science Consultant, and researcher in autonomous systems."
+  >
+  <meta
+    name="author"
+    content="José Daniel Quintana Fuentes"
+  >
+  <meta
+    name="theme-color"
+    content="#1f1f1f"
+  >
+  <meta
+    name="color-scheme"
+    content="dark light"
+  >
+
+  <meta
+    property="og:title"
+    content="José Daniel Quintana Fuentes | Professional Portfolio"
+  >
+  <meta
+    property="og:description"
+    content="Electronics Engineer and M.Sc. in Electrical Engineering with experience in artificial intelligence, data science, computer vision, automatic control and autonomous systems."
+  >
+  <meta
+    property="og:type"
+    content="website"
+  >
+  <meta
+    property="og:url"
+    content="https://josequintana20.github.io/"
+  >
+  <meta
+    property="og:image"
+    content="https://josequintana20.github.io/img/me.jpg"
+  >
+  <meta
+    property="og:image:alt"
+    content="Portrait of José Daniel Quintana Fuentes"
+  >
+
+  <link
+    rel="canonical"
+    href="https://josequintana20.github.io/"
+  >
+  <link
+    rel="icon"
+    href="img/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <!--
+    Apply the stored or system theme before loading the page styles.
+    This avoids a visible flash between themes.
+  -->
+  <script>
+    (() => {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem("theme");
+      } catch {
+        savedTheme = null;
       }
 
-      // Theme toggle
-      themeToggle.addEventListener("click", () => {
-        const isLightMode = body.classList.toggle("light-mode");
-        if (isLightMode) {
-          icon.classList.replace("fa-moon", "fa-sun");
-          localStorage.setItem("theme", "light");
-        } else {
-          icon.classList.replace("fa-sun", "fa-moon");
-          localStorage.setItem("theme", "dark");
+      const theme =
+        savedTheme === "light" || savedTheme === "dark"
+          ? savedTheme
+          : matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark";
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+
+  <!-- Typography -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Styles -->
+  <link
+    href="css/frame.css"
+    rel="stylesheet"
+  >
+  <link
+    href="css/menu.css"
+    rel="stylesheet"
+  >
+  <link
+    href="css/controls.css"
+    rel="stylesheet"
+  >
+  <link
+    href="css/custom.css"
+    rel="stylesheet"
+  >
+
+  <!-- Icons -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Structured profile data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "José Daniel Quintana Fuentes",
+      "url": "https://josequintana20.github.io/",
+      "image": "https://josequintana20.github.io/img/me.jpg",
+      "jobTitle": "Artificial Intelligence and Data Science Consultant",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidad Tecnológica de Pereira"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidad del Magdalena"
         }
-      });
-    });
+      ],
+      "sameAs": [
+        "https://github.com/JoseQuintana20",
+        "https://linkedin.com/in/ingjosequintana",
+        "https://orcid.org/0009-0002-1582-2579",
+        "https://scholar.google.com/citations?user=r8wImRIAAAAJ&hl=en",
+        "https://researchgate.net/profile/Jose-Quintana-29"
+      ]
+    }
   </script>
 </head>
 
 <body>
-  <!-- Header Section -->
+  <!-- Header -->
   <header>
     <div class="menu-container">
-      <!-- Logo Section -->
       <div class="logo">
-        <a href="#">
-          <img src="img/icon.png" alt="Logo" class="logo-image">
+        <a
+          href="#home"
+          aria-label="Go to home"
+        >
+          <img
+            src="img/icon.png"
+            alt=""
+            class="logo-image"
+            width="599"
+            height="653"
+          >
         </a>
       </div>
-      <!-- Navigation Menu -->
-      <nav class="menu-items" aria-label="Main Navigation">
-          <a href="#about">About</a>
-          <a href="#education">Education</a>
-          <a href="#research">Research</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#publications">Publications</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+
+      <nav
+        id="main-navigation"
+        class="menu-items"
+        aria-label="Main navigation"
+      >
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
       </nav>
 
-      <!-- Theme Toggle Button -->
-      <button class="theme-toggle" aria-label="Toggle Theme">
-        <i class="fas fa-moon"></i> <!-- Initial icon is a moon -->
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch theme"
+        aria-pressed="false"
+      >
+        <i
+          class="fas fa-moon"
+          aria-hidden="true"
+        ></i>
       </button>
-      
-      <!-- Mobile Menu Button -->
-      <button class="menu-button" aria-label="Toggle Menu">
-        <i class="fas fa-bars"></i>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="main-navigation"
+        aria-expanded="false"
+      >
+        <i
+          class="fas fa-bars"
+          aria-hidden="true"
+        ></i>
       </button>
     </div>
   </header>
 
-  
-
-  <!-- Main Content -->
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero -->
+    <section
+      id="home"
+      class="hero"
+      aria-labelledby="hero-title"
+    >
       <div class="hero-content">
-        <img src="img/me.jpg" alt="José Quintana" class="profile-img">
-        <h1>Jose Daniel Quintana Fuentes</h1>
-        <p class="hero-subtitle">Master's Student in Electrical Engineering | Electronics Engineer</p>
-        <ul class="social-icons">
-          <li><a href="https://linkedin.com/in/ingjosequintana" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-          <li><a href="https://scholar.google.com/citations?user=r8wImRIAAAAJ&hl" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a></li>
-          <li><a href="https://orcid.org/0009-0002-1582-2579" target="_blank" aria-label="ORCID"><i class="fab fa-orcid"></i></a></li>
-          <li><a href="https://researchgate.net/profile/Jose-Quintana-29" target="_blank" aria-label="ResearchGate"><i class="fas fa-flask"></i></a></li>
-          <li><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002310805" target="_blank" aria-label="CvLAC"><i class="fas fa-id-card"></i></a></li>
+        <img
+          src="img/me.jpg"
+          alt="Portrait of José Daniel Quintana Fuentes"
+          class="profile-img"
+          width="1000"
+          height="1000"
+          fetchpriority="high"
+          decoding="async"
+        >
+
+        <h1 id="hero-title">
+          José Daniel Quintana Fuentes
+        </h1>
+
+        <p class="hero-subtitle">
+          Electronics Engineer · M.Sc. in Electrical Engineering ·
+          Artificial Intelligence and Data Science Consultant
+        </p>
+
+        <ul
+          class="social-icons"
+          aria-label="Professional profiles"
+        >
+          <li>
+            <a
+              href="https://linkedin.com/in/ingjosequintana"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <i
+                class="fab fa-linkedin-in"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://github.com/JoseQuintana20"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <i
+                class="fab fa-github"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://scholar.google.com/citations?user=r8wImRIAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Scholar"
+              title="Google Scholar"
+            >
+              <i
+                class="fas fa-graduation-cap"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://orcid.org/0009-0002-1582-2579"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ORCID"
+              title="ORCID"
+            >
+              <i
+                class="fab fa-orcid"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://researchgate.net/profile/Jose-Quintana-29"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ResearchGate"
+              title="ResearchGate"
+            >
+              <i
+                class="fab fa-researchgate"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002310805"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="CvLAC"
+              title="CvLAC"
+            >
+              <i
+                class="fas fa-id-card"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="content-container">
+    <!-- About -->
+    <section
+      id="about"
+      class="content-container"
+    >
       <div class="content">
         <h2>About Me</h2>
         <hr>
+
         <p>
-          I am Jose Quintana, an electronics engineer and a master's student in electrical engineering with a robust background in designing and developing advanced technological systems. My passion lies in integrating artificial intelligence, automatic control, and innovative technologies applied to fields such as Unmanned Aerial Vehicles (UAVs), the Internet of Things (IoT), and autonomous navigation. Throughout my academic and professional journey, I have gained experience in research, prototype development, and leading multidisciplinary projects. I am recognized for my commitment to excellence, creativity, and a continuous learning mindset. My goal is to make significant contributions to technological advancement through solutions that transform industries and enhance quality of life.
+          I am an Electronics Engineer and M.Sc. in Electrical Engineering
+          with experience in artificial intelligence, data science,
+          automatic control, computer vision and autonomous systems.
+          I currently work independently as an Artificial Intelligence
+          and Data Science Consultant, developing data-processing
+          workflows, analytical solutions and computational models that
+          support decision-making.
         </p>
-        <h3>Research Focus</h3>
+
         <p>
-          My master's thesis focuses on developing an integrated system for visual perception and adaptive control in quadcopters navigating dynamic environments. This research integrates deep learning, Kalman filtering, and adaptive LQR controllers to enable real-time trajectory planning and obstacle avoidance. By addressing challenges in perception and control, I aim to enhance UAVs' capabilities in precision agriculture, urban monitoring, and disaster response.
+          My research background includes visual perception, state
+          estimation, adaptive and optimal control, embedded systems and
+          autonomous navigation for unmanned aerial vehicles. I am
+          particularly interested in transforming research, data and
+          computational models into practical solutions for industrial,
+          energy, public-policy and social challenges.
         </p>
-        <h3>Professional Goals</h3>
+
+        <h3>Professional Focus</h3>
+
         <p>
-          I am passionate about bridging the gap between theoretical research and practical applications in robotics and control systems. My goal is to contribute to the advancement of autonomous systems through innovative solutions that address real-world challenges in industry and society.
-        </p>
-        <h3>Interests and Passions</h3>
-        <p>
-          In my free time, I love exploring the wonders of the universe—whether I'm diving into the mysteries of physics, astrophysics, and math, or simply spending nights stargazing. I also enjoy getting hands-on with 3D printing and building cool hardware projects that bring my ideas to life. Music is a big passion of mine too; I love listening to diverse tunes and unraveling music theory to understand the magic behind timeless melodies. I'm equally fascinated by how the human body works—from its intricate hormonal balance to the fascinating complexities of the mind—which naturally sparks my interest in philosophy and history. And when it's time to relax, nothing beats unwinding with a great video game that challenges my creativity and imagination.
+          Artificial intelligence, data science, computer vision,
+          automatic control, autonomous navigation, embedded computing,
+          research and technology consulting.
         </p>
       </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="content-container">
-        <div class="content">
-            <h2>Education</h2>
-            <hr>
-            <div class="education-card">
-                <h3>Master's in Electrical Engineering</h3>
-                <p class="institution">Technological University of Pereira</p>
-                <p class="date">2023 - 2025</p>
-                <p class="description">
-                    Specializing in Autonomous Systems and Control, with focus on UAV navigation and adaptive control systems.
-                    Research areas include computer vision, deep learning, and real-time control systems.
-                </p>
-            </div>
-            <div class="education-card">
-                <h3>Bachelor of Electronics Engineering</h3>
-                <p class="institution">University of Magdalena</p>
-                <p class="date">2018 - 2022</p>
-                <p class="description">
-                    Acquired a solid foundation in embedded systems, microelectronic design, Internet of Things (IoT), control theory, and multimedia processing, with a particular emphasis on computer vision through aerial drone imagery. Developed skills to analyze, model, design, and implement electronic systems, fostering interdisciplinary collaboration to address technological challenges.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Section -->
-    <section id="research" class="content-container">
-        <div class="content">
-            <h2>Research Focus & Contributions</h2>
-            <hr>
-            
-            <!-- Main Research Project -->
-            <div class="research-highlight">
-                <h3>Current Research Project</h3>
-                <div class="thesis-title">
-                    <p class="highlighted-text">
-                        "Integrated System for Visual Perception and Adaptive Control for Autonomous Navigation of Quadcopters in Dynamic Environments"
-                    </p>
-                    <p class="thesis-info">Master's Thesis Research | Advisor: PhD. Eduardo Giraldo</p>
-                </div>
-                
-                <h4>Research Overview</h4>
-                <p>
-                    My research addresses critical challenges in autonomous UAV navigation by developing an integrated system 
-                    that combines advanced visual perception with adaptive control strategies. This work aims to enhance 
-                    the capabilities of autonomous drones in complex, dynamic environments, with particular focus on 
-                    real-time decision-making and operational resilience.
-                </p>
-    
-                <h4>Research Objectives</h4>
-                <div class="objectives-grid">
-                    <div class="objective-card">
-                        <h5>Primary Objectives</h5>
-                        <ul>
-                            <li>Development of robust visual perception systems for real-time obstacle detection and environmental mapping</li>
-                            <li>Implementation of adaptive control algorithms for optimal trajectory generation and tracking</li>
-                            <li>Integration of perception and control systems for autonomous navigation in dynamic environments</li>
-                            <li>Validation through comprehensive simulation and experimental testing</li>
-                        </ul>
-                    </div>
-                </div>
-    
-                <h4>Key Research Areas</h4>
-                <div class="research-areas">
-                    <div class="area-card">
-                        <h5>Visual Perception Systems</h5>
-                        <p>
-                            Development of advanced computer vision algorithms using deep learning approaches for:
-                        </p>
-                        <ul>
-                            <li>Real-time object detection and tracking</li>
-                            <li>Environmental mapping and scene understanding</li>
-                            <li>Depth estimation and 3D reconstruction</li>
-                            <li>Feature extraction and matching for localization</li>
-                        </ul>
-                    </div>
-    
-                    <div class="area-card">
-                        <h5>Adaptive Control Strategies</h5>
-                        <p>
-                            Design and implementation of sophisticated control systems incorporating:
-                        </p>
-                        <ul>
-                            <li>Linear Quadratic Regulators (LQR) with adaptive parameters</li>
-                            <li>Kalman filtering for state estimation</li>
-                            <li>Model predictive control for trajectory optimization</li>
-                            <li>Robust control techniques for uncertainty management</li>
-                        </ul>
-                    </div>
-    
-                    <div class="area-card">
-                        <h5>Real-Time Implementation</h5>
-                        <p>
-                            Development of efficient real-time solutions focusing on:
-                        </p>
-                        <ul>
-                            <li>Optimization of computational resources</li>
-                            <li>Hardware-software integration</li>
-                            <li>Performance evaluation in physical environments</li>
-                            <li>System reliability and safety considerations</li>
-                        </ul>
-                    </div>
-    
-                    <div class="area-card">
-                        <h5>Multi-Agent Systems</h5>
-                        <p>
-                            Investigation of collaborative robotics aspects including:
-                        </p>
-                        <ul>
-                            <li>Swarm behavior and coordination strategies</li>
-                            <li>Distributed control algorithms</li>
-                            <li>Inter-agent communication protocols</li>
-                            <li>Task allocation and resource optimization</li>
-                        </ul>
-                    </div>
-                </div>
-    
-                <h4>Applications & Impact</h4>
-                <div class="applications">
-                    <p>
-                        This research has significant implications for various real-world applications:
-                    </p>
-                    <ul>
-                        <li>
-                            <strong>Precision Agriculture:</strong> Enhanced crop monitoring and automated field management
-                        </li>
-                        <li>
-                            <strong>Disaster Response:</strong> Improved search and rescue operations in hazardous environments
-                        </li>
-                        <li>
-                            <strong>Urban Monitoring:</strong> Advanced infrastructure inspection and surveillance
-                        </li>
-                        <li>
-                            <strong>Industrial Automation:</strong> Efficient inventory management and facility inspection
-                        </li>
-                    </ul>
-                </div>
-    
-                <h4>Research Methodology</h4>
-                <div class="methodology">
-                    <p>
-                        The research follows a comprehensive approach combining theoretical development, 
-                        simulation studies, and experimental validation:
-                    </p>
-                    <ul>
-                        <li>Theoretical framework development and mathematical modeling</li>
-                        <li>Algorithm implementation and simulation testing</li>
-                        <li>Hardware prototype development and integration</li>
-                        <li>Experimental validation in controlled environments</li>
-                        <li>Performance analysis and optimization</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="content-container">
+    <!-- Experience -->
+    <section
+      id="experience"
+      class="content-container"
+    >
       <div class="content">
-        <h2>Academic and Professional Experience</h2>
+        <h2>Professional Experience</h2>
         <hr>
-        <p>Throughout my career, I have participated in various projects that integrate advanced technologies and multidisciplinary skills:</p>
-        <ol>
-          <li>
-            <strong>IoT and AI Systems Development:</strong>
-            <ul>
-              <li>Implemented automated response systems using natural language processing, such as chatbots.</li>
-              <li>Optimized predictive models for managing residential property sales.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>UAV Research:</strong>
-            <ul>
-              <li>Developed algorithms for tracking dynamic trajectories in drones.</li>
-              <li>Integrated perception technologies, including depth cameras and 3D mapping systems, to enhance autonomous navigation.</li>
-              <li>Addressed challenges such as obstacle avoidance and adaptive control.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Data Science Applications:</strong>
-            <ul>
-              <li>Conducted exploratory data analysis and preprocessing in academic projects.</li>
-              <li>Utilized supervised and unsupervised learning to solve real-world problems.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Research Group Participation:</strong>
-            <ul>
-              <li>
-                <strong>Automatic Control Research Group:</strong> 
-                I am an active member of the <a href="https://sites.google.com/utp.edu.co/controlautomatico/" target="_blank">Automatic Control Research Group</a>, where I am developing my master's thesis under the supervision of Ph.D. Eduardo Giraldo. This group is dedicated to advancing research, development, and innovation in areas such as system identification, adaptive control, optimal control, dynamic inverse problems, and state estimation. Our work applies these concepts across a diverse range of physical systems, from biological processes to power systems.
-                <ul>
-                  <li>Main research areas include:</li>
-                  <ul>
-                    <li>Adaptive Control</li>
-                    <li>Intelligent Control</li>
-                    <li>Nonlinear Control</li>
-                    <li>Optimal Control</li>
-                    <li>State Estimation</li>
-                    <li>System Identification</li>
-                    <li>Dynamic Inverse Problems</li>
-                    <li>Stochastic Control</li>
-                    <li>Virtual Environment Development</li>
-                    <li>Hardware Prototype Design and Implementation</li>
-                  </ul>
-                </ul>
-              </li>
-              <li>
-                <strong>Automatic Control Research Seedbed:</strong> I participate in training undergraduate students in areas such as physical system simulation, applied basic control, programming tools (MATLAB, Simulink, LabVIEW, among others), and embedded control.
-              </li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="content-container">
-      <div class="content">
-          <h2>Academic and Professional Projects</h2>
-          <hr>
-          <p class="section-intro">
-              A collection of technical projects showcasing expertise across various domains of electrical and computer engineering.
-          </p>
-  
-          <!-- Computer Vision and AI Category -->
-          <div class="project-category">
-              <h3>Computer Vision & Artificial Intelligence</h3>
-              <div class="projects-grid">
-                  <div class="project-card">
-                      <h4>Hand Detection and Finger Counting</h4>
-                      <p>Real-time hand gesture recognition system implemented using Python, OpenCV, and MediaPipe frameworks for accurate finger counting and hand tracking.</p>
-                      <a href="https://github.com/JoseQuintana20/Hand_detection_and_finger_counting" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-  
-                  <div class="project-card">
-                      <h4>Segmentation and Contour Recognition</h4>
-                      <p>Advanced image processing system for rooftop panel analysis, implementing color-based segmentation and edge detection algorithms in Google Colab.</p>
-                      <a href="https://github.com/JoseQuintana20/Segmentation_and_contour_recognition" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-  
-                  <div class="project-card">
-                      <h4>Segmentation of Colored Balls</h4>
-                      <p>Color space analysis project implementing sophisticated segmentation algorithms for multi-colored object detection and classification.</p>
-                      <a href="https://github.com/JoseQuintana20/Segmentation_of_colored_balls" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-  
-                  <div class="project-card">
-                      <h4>Image Recognition with Deep Neural Networks</h4>
-                      <p>Implementation of advanced neural networks for image recognition using MATLAB's Deep Network Designer, focusing on pattern recognition and classification.</p>
-                      <a href="https://github.com/JoseQuintana20/Image_Recognition-Deep_Neural_Networks" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-  
-                  <div class="project-card">
-                      <h4>Detection of Open/Closed Eyes</h4>
-                      <p>Eye state analysis system using cascade object detection and image segmentation techniques in MATLAB for precise eye state classification.</p>
-                      <a href="https://github.com/JoseQuintana20/Detection_eyes_closed-Open" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-  
-                  <div class="project-card">
-                      <h4>Facial and Voice Recognition</h4>
-                      <p>Multimodal biometric system combining OpenCV-based facial recognition (EigenFaces, FisherFaces, LBPH) with Google API speech recognition capabilities.</p>
-                      <a href="https://github.com/JoseQuintana20/Facial_and_Voice_Recognition" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Robotics and Control Systems Category -->
-          <div class="project-category">
-              <h3>Robotics & Control Systems</h3>
-              <div class="projects-grid">
-                  <div class="project-card">
-                      <h4>Object Filtering and Environmental Perception for Drones</h4>
-                      <p>Advanced autonomous navigation system for UAVs incorporating deep learning and depth camera technology for real-time trajectory generation and object filtering.</p>
-                      <a href="https://github.com/JoseQuintana20/Drone_Object_Filtering" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-  
-                  <div class="project-card">
-                      <h4>Multi-Agent Motion Planning</h4>
-                      <p>Sophisticated optimization algorithms for coordinated motion planning in multi-robot systems, featuring obstacle avoidance and task prioritization capabilities.</p>
-                      <a href="https://github.com/JoseQuintana20/Multi_Agent_Motion_Planning" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-  
-                  <div class="project-card">
-                      <h4>BattleBot WiFi Controller</h4>
-                      <p>Real-time control system featuring a responsive web interface hosted on ESP32 for precise motor and weapon control in combat robotics applications.</p>
-                      <a href="https://github.com/JoseQuintana20/BattleBot_WifiController" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- IoT and Embedded Systems Category -->
-          <div class="project-category">
-              <h3>IoT & Embedded Systems</h3>
-              <div class="projects-grid">
-                  <div class="project-card">
-                      <h4>IoT Project with ESP32</h4>
-                      <p>Comprehensive IoT system demonstrating LED control, MQTT communication, Node-RED integration, Telegram monitoring, and PostgreSQL data storage capabilities.</p>
-                      <a href="https://github.com/JoseQuintana20/IoT-Project-with-ESP32" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-  
-                  <div class="project-card">
-                      <h4>Fire Alarm Project</h4>
-                      <p>Advanced microelectronic design project focused on implementing reliable and efficient fire detection and alarm systems.</p>
-                      <a href="https://github.com/JoseQuintana20/Proyecto_Alarma_Contra_Incendios" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Software Development and Algorithms Category -->
-          <div class="project-category">
-              <h3>Software Development & Algorithms</h3>
-              <div class="projects-grid">
-                  <div class="project-card">
-                      <h4>ChatBot</h4>
-                      <p>AI-powered application designed to handle frequently asked questions from the Faculty of Engineering's academic community, implementing natural language processing techniques.</p>
-                      <a href="https://github.com/JoseQuintana20/ChatBot" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-  
-                  <div class="project-card">
-                      <h4>Graph Optimization</h4>
-                      <p>Mathematical optimization project focusing on minimizing metering stations in gas pipeline networks through advanced graph analysis algorithms.</p>
-                      <a href="https://github.com/JoseQuintana20/Graph_Optimization" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-  
-                  <div class="project-card">
-                      <h4>Maze (Labyrinth Project)</h4>
-                      <p>Python implementation of maze generation and solving algorithms utilizing spanning tree methods including Prim, Kruskal, and Dijkstra algorithms.</p>
-                      <a href="https://github.com/JoseQuintana20/Maze_Project" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-  
-                  <div class="project-card">
-                      <h4>Audio Signal Processing</h4>
-                      <p>MATLAB-based audio analysis and filtering system implementing various digital signal processing techniques for sound manipulation and analysis.</p>
-                      <a href="https://github.com/JoseQuintana20/Audio_Signal_Processing" target="_blank" class="github-link">
-                          <i class="fab fa-github"></i> View Project
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
+        <div class="experience-list">
+          <article class="experience-card">
+            <h3>
+              Artificial Intelligence and Data Science Consultant
+            </h3>
 
-
-
-    <!-- Publications Section -->
-    <section id="publications" class="content-container">
-        <div class="content">
-            <h2>Research in Progress</h2>
-            <hr>
-            <div class="publication-card">
-                <h3>Master's Thesis</h3>
-                <p class="publication-title">
-                    "Integrated System for Visual Perception and Adaptive Control for Autonomous Navigation of Quadcopters in Dynamic Environments"
-                </p>
-                <p class="authors">Jose Quintana, E Giraldo.</p>
-                <p class="institution">Universidad Tecnológica de Pereira, Expected 2025</p>
-                <p class="abstract">
-                    Development of an innovative system combining computer vision and adaptive control for autonomous drone navigation,
-                    with applications in precision agriculture and urban monitoring.
-                </p>
+            <div class="experience-meta">
+              <span>Independent Professional</span>
+              <span>2025–Present</span>
+              <span>Pereira, Colombia</span>
             </div>
 
-            <h2>Publications</h2>
-            <hr>
-            <div class="publication-card">
-                <h3>AI Academic Assistant Application</h3>
-                <p class="publication-title">
-                    "Desarrollo de una aplicación con Inteligencia Artificial que pueda responder posibles preguntas frecuentes de la comunidad académica de la Facultad de Ingenierías de la Universidad Tecnológica De Pereira"
-                </p>
-                <p class="authors">Jose Daniel Quintana Fuentes</p>
-                <p class="institution">Universidad del Magdalena, 2023</p>
-                <p class="abstract">
-                    This project presents the design and implementation of an artificial intelligence-based application developed to answer frequently asked questions from students, faculty, and administrative staff within an engineering faculty. The system was created as part of an academic internship and utilizes natural language processing techniques to provide efficient and automated interaction.
-                </p>
+            <ul>
+              <li>
+                Data cleaning, processing, analysis and visualization
+                to support interpretation and decision-making.
+              </li>
+              <li>
+                Development of computational solutions and artificial
+                intelligence models using Python.
+              </li>
+              <li>
+                Preparation of technical reports and communication of
+                analytical results for professional and research
+                projects.
+              </li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <h3>Data Analyst and Research Support</h3>
+
+            <div class="experience-meta">
+              <span>BIT DATA HEALTHCARE S.A.S.</span>
+              <span>Apr. 2026–Jul. 2026</span>
+              <span>Pereira, Colombia</span>
             </div>
+
+            <ul>
+              <li>
+                Professional services within a project associated with
+                Colombia's Ministry of Equality and Equity and executed
+                for the Universidad Nacional de Colombia.
+              </li>
+              <li>
+                Consolidation and structuring of research information
+                concerning farmers' rights and equality in Colombia.
+              </li>
+              <li>
+                Style review, baseline-document consolidation and
+                systematization of meeting audio as inputs for
+                public-policy guidelines.
+              </li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <h3>
+              Data Analyst for Artificial Intelligence Model Development
+            </h3>
+
+            <div class="experience-meta">
+              <span>
+                Faculty of Engineering, Universidad Tecnológica de
+                Pereira
+              </span>
+              <span>Jan. 2026–Jun. 2026</span>
+              <span>Pereira, Colombia</span>
+            </div>
+
+            <ul>
+              <li>
+                Professional services supporting artificial intelligence
+                models for priority challenges in Colombia's mining and
+                energy sector.
+              </li>
+              <li>
+                Processing, structuring and analysis of data for
+                evaluating energy-community proposals and the transition
+                toward more sustainable energy sources.
+              </li>
+              <li>
+                Preparation of technical and analytical outputs within
+                a project conducted with Colombia's Ministry of Mines
+                and Energy.
+              </li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <h3>Researcher</h3>
+
+            <div class="experience-meta">
+              <span>
+                Automatic Control Research Group (GCA), Universidad
+                Tecnológica de Pereira
+              </span>
+              <span>2023–Present</span>
+              <span>Pereira, Colombia</span>
+            </div>
+
+            <ul>
+              <li>
+                Research in automatic control, autonomous navigation,
+                computer vision and dynamic systems.
+              </li>
+              <li>
+                Development and completion of a master's thesis
+                integrating visual perception and control for
+                quadcopter navigation in dynamic environments.
+              </li>
+              <li>
+                Mentoring of undergraduate students in electronics,
+                physical-system simulation and control fundamentals
+                using MATLAB/Simulink and Arduino.
+              </li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <h3>Electronics Engineering Intern</h3>
+
+            <div class="experience-meta">
+              <span>
+                Dean's Office, Faculty of Engineering, Universidad
+                Tecnológica de Pereira
+              </span>
+              <span>Feb. 2023–Jun. 2023</span>
+              <span>Pereira, Colombia</span>
+            </div>
+
+            <ul>
+              <li>
+                Designed and implemented an NLP-based chatbot for
+                frequently asked academic questions.
+              </li>
+              <li>
+                Organized institutional information used as the
+                system's knowledge base.
+              </li>
+              <li>
+                Documented the design, implementation and validation
+                process as an undergraduate project.
+              </li>
+            </ul>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="content-container">
-      <div class="c  ontent">
+    <!-- Projects -->
+    <section
+      id="projects"
+      class="content-container"
+    >
+      <div class="content">
+        <h2>Academic and Professional Projects</h2>
+        <hr>
+
+        <p class="section-intro">
+          A selection of projects in artificial intelligence, computer
+          vision, autonomous systems, control, embedded development,
+          signal processing and algorithms.
+        </p>
+
+        <div class="project-category">
+          <h3>Computer Vision and Artificial Intelligence</h3>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <h4>Hand Detection and Finger Counting</h4>
+              <p>
+                Real-time hand-tracking and finger-counting system using
+                Python, OpenCV and MediaPipe.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/Hand_detection_and_finger_counting"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h4>Segmentation and Contour Recognition</h4>
+              <p>
+                Image-processing project for rooftop-panel analysis
+                using color segmentation, edge detection and contour
+                extraction.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/Segmentation_and_contour_recognition"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h4>Segmentation of Colored Balls</h4>
+              <p>
+                Color-space analysis and segmentation workflow for
+                detecting and classifying multiple colored objects.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/Segmentation_of_colored_balls"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h4>Image Recognition with Deep Neural Networks</h4>
+              <p>
+                Image-classification implementation using neural
+                networks and MATLAB Deep Network Designer.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/Image_Recognition-Deep_Neural_Networks"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h4>Detection of Open and Closed Eyes</h4>
+              <p>
+                MATLAB prototype for eye-state analysis using object
+                detection and image-segmentation techniques.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/Detection_eyes_closed-Open"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h4>Facial and Voice Recognition</h4>
+              <p>
+                Multimodal biometric prototype combining OpenCV facial
+                recognition with speech-recognition services.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/Facial_and_Voice_Recognition"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-category">
+          <h3>Robotics and Control Systems</h3>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <h4>
+                Object Filtering and Environmental Perception for Drones
+              </h4>
+              <p>
+                UAV-perception project focused on object filtering,
+                depth sensing and environmental interpretation for
+                autonomous navigation.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/Drone_Object_Filtering"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h4>Multi-Agent Motion Planning</h4>
+              <p>
+                Motion-planning implementation for coordinated mobile
+                agents with path assignment, obstacle handling and task
+                prioritization.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/Multi_Agent_Motion_Planning"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h4>BattleBot WiFi Controller</h4>
+              <p>
+                ESP32-based real-time control platform with a responsive
+                web interface for robotic actuation.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/BattleBot_WifiController"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-category">
+          <h3>IoT and Embedded Systems</h3>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <h4>IoT Project with ESP32</h4>
+              <p>
+                IoT prototype integrating MQTT, Node-RED, Telegram
+                monitoring and PostgreSQL-based data storage.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/IoT-Project-with-ESP32"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h4>Fire Alarm Project</h4>
+              <p>
+                Electronic-system design focused on fire detection,
+                alarm activation and reliable prototype operation.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/Proyecto_Alarma_Contra_Incendios"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-category">
+          <h3>Software Development and Algorithms</h3>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <h4>Academic Assistant Chatbot</h4>
+              <p>
+                NLP-based application developed in Python to answer
+                frequently asked questions from an engineering
+                faculty's academic community.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/ChatBot"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h4>Graph Optimization</h4>
+              <p>
+                Graph-based optimization project for reducing
+                measurement stations in gas-pipeline networks.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/Graph_Optimization"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h4>Maze Generation and Solving</h4>
+              <p>
+                Python implementation of maze-generation and
+                path-solving methods based on Prim, Kruskal and
+                Dijkstra algorithms.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/Maze_Project"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h4>Audio Signal Processing</h4>
+              <p>
+                MATLAB-based audio-analysis and filtering project using
+                digital signal-processing techniques.
+              </p>
+              <a
+                href="https://github.com/JoseQuintana20/Audio_Signal_Processing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                <i
+                  class="fab fa-github"
+                  aria-hidden="true"
+                ></i>
+                View project
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section
+      id="education"
+      class="content-container"
+    >
+      <div class="content">
+        <h2>Education</h2>
+        <hr>
+
+        <article class="education-card">
+          <h3>M.Sc. in Electrical Engineering</h3>
+
+          <p class="institution">
+            Universidad Tecnológica de Pereira
+          </p>
+
+          <p class="date">2023–2026</p>
+
+          <p>
+            Concentration in Automation and Electronics. Master's thesis
+            on integrated visual perception and adaptive control for
+            autonomous quadcopter navigation in dynamic environments.
+          </p>
+        </article>
+
+        <article class="education-card">
+          <h3>Bachelor of Electronics Engineering</h3>
+
+          <p class="institution">
+            Universidad del Magdalena
+          </p>
+
+          <p class="date">2018–2023</p>
+
+          <p>
+            Training in embedded systems, Internet of Things, control
+            theory, signal and image processing, software development
+            and electronic-system design.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section
+      id="research"
+      class="content-container"
+    >
+      <div class="content">
+        <h2>Research</h2>
+        <hr>
+
+        <article class="research-highlight">
+          <h3>
+            Integrated Visual Perception and Adaptive Control for
+            Autonomous Quadcopter Navigation
+          </h3>
+
+          <div class="thesis-title">
+            <p class="highlighted-text">
+              Master's thesis completed in 2026 at the Universidad
+              Tecnológica de Pereira.
+            </p>
+
+            <p class="thesis-info">
+              Advisors: Eduardo Giraldo-Suárez and Sergio
+              Velarde-Gómez
+            </p>
+          </div>
+
+          <h4>Research Overview</h4>
+
+          <p>
+            The research proposes an integrated framework for
+            quadcopter navigation in dynamic three-dimensional
+            environments under computational and actuation constraints.
+            It combines dynamic modeling, optimal control with integral
+            action and saturation handling, supervised online
+            adaptation, voxel-based occupancy maps, global and local
+            planning, trajectory smoothing and embedded-platform
+            trajectory tracking.
+          </p>
+
+          <h4>Core Areas</h4>
+
+          <div class="research-areas">
+            <article class="area-card">
+              <h5>Visual Perception</h5>
+              <ul>
+                <li>
+                  Obstacle detection and environmental representation
+                </li>
+                <li>
+                  Depth estimation and three-dimensional mapping
+                </li>
+                <li>
+                  Image processing and motion analysis
+                </li>
+              </ul>
+            </article>
+
+            <article class="area-card">
+              <h5>Control and Estimation</h5>
+              <ul>
+                <li>Optimal and adaptive control</li>
+                <li>State estimation and filtering</li>
+                <li>Multivariable dynamic modeling</li>
+              </ul>
+            </article>
+
+            <article class="area-card">
+              <h5>Navigation</h5>
+              <ul>
+                <li>Global and local path planning</li>
+                <li>Trajectory smoothing and tracking</li>
+                <li>
+                  Static and dynamic obstacle avoidance
+                </li>
+              </ul>
+            </article>
+
+            <article class="area-card">
+              <h5>Implementation</h5>
+              <ul>
+                <li>MATLAB/Simulink and Python</li>
+                <li>
+                  Embedded computing and simulation
+                </li>
+                <li>
+                  Evaluation under operational constraints
+                </li>
+              </ul>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section
+      id="publications"
+      class="content-container"
+    >
+      <div class="content">
+        <h2>Publications and Academic Work</h2>
+        <hr>
+
+        <article class="publication-card">
+          <h3>Master's Thesis</h3>
+
+          <p class="publication-title">
+            Sistema integrado de percepción visual y control adaptativo
+            para navegación autónoma de Quadcopters en entornos
+            dinámicos
+          </p>
+
+          <p class="authors">
+            Quintana-Fuentes, José Daniel
+          </p>
+
+          <p class="institution">
+            Universidad Tecnológica de Pereira, 2026
+          </p>
+
+          <p class="abstract">
+            Master's degree thesis on autonomous navigation, adaptive
+            and optimal control, visual perception and trajectory
+            planning for quadcopters.
+          </p>
+
+          <a
+            href="https://hdl.handle.net/11059/16814"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button--secondary button--small"
+          >
+            <i
+              class="fas fa-book-open"
+              aria-hidden="true"
+            ></i>
+            View repository record
+          </a>
+        </article>
+
+        <article class="publication-card">
+          <h3>Undergraduate Project</h3>
+
+          <p class="publication-title">
+            Desarrollo de una aplicación con inteligencia artificial
+            que pueda responder posibles preguntas frecuentes de la
+            comunidad académica de la Facultad de Ingenierías de la
+            Universidad Tecnológica de Pereira
+          </p>
+
+          <p class="authors">
+            Quintana-Fuentes, José Daniel
+          </p>
+
+          <p class="institution">
+            Universidad del Magdalena, 2023
+          </p>
+
+          <p class="abstract">
+            Design and implementation of an artificial-intelligence
+            application based on natural language processing for
+            academic assistance.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section
+      id="skills"
+      class="content-container"
+    >
+      <div class="content">
         <h2>Technical Skills</h2>
         <hr>
+
         <ul>
-          <li><strong>Programming:</strong> Proficient in Python, C++, Java, JavaScript, R, and MicroPython.</li>
-          <li><strong>Tools:</strong> Skilled in MATLAB, Simulink, Git, AWS, and hardware design software including 3D printing tools.</li>
-          <li><strong>Database Management:</strong> Experience with database management systems such as MariaDB and MySQL.</li>
-          <li><strong>Specializations:</strong> Robotics, especially aerial robotics, adaptive control, trajectory prediction, and autonomous navigation.</li>
+          <li>
+            <strong>Artificial Intelligence and Data:</strong>
+            data cleaning, processing, analysis, visualization,
+            machine learning, neural networks and natural language
+            processing.
+          </li>
+
+          <li>
+            <strong>Programming:</strong>
+            Python, MATLAB/Simulink and C/C++; working knowledge of
+            Java, JavaScript, R and MicroPython.
+          </li>
+
+          <li>
+            <strong>Computer Vision:</strong>
+            OpenCV, image processing, optical flow, stereo vision,
+            object detection, tracking, visual odometry and SLAM.
+          </li>
+
+          <li>
+            <strong>Control and Estimation:</strong>
+            PID, LQR, LQI, LQG, MPC, adaptive control, system
+            identification and Kalman filtering.
+          </li>
+
+          <li>
+            <strong>Robotics and Simulation:</strong>
+            ROS, PX4, MAVROS, AirSim, Gazebo, HIL/SITL and
+            path-planning methods.
+          </li>
+
+          <li>
+            <strong>Embedded Systems:</strong>
+            NVIDIA Jetson Nano, Pixhawk, ESP32, Arduino, PIC, Intel
+            RealSense and IMX219 cameras.
+          </li>
+
+          <li>
+            <strong>Frameworks and Tools:</strong>
+            PyTorch, TensorFlow, Git, GitHub, Docker and LaTeX.
+          </li>
+
+          <li>
+            <strong>Languages:</strong>
+            Spanish (native) and English (B1).
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="content-container">
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="content-container"
+    >
       <div class="content">
         <h2>Contact</h2>
         <hr>
+
         <p>
-          I am always eager to connect, collaborate, and explore new opportunities. Please feel free to reach out to me through the links provided in the footer below.
+          I am open to remote opportunities, consulting projects and
+          collaborations in artificial intelligence, data science,
+          computer vision, control systems and autonomous
+          technologies.
         </p>
+
+        <div
+          class="control-group"
+          style="justify-content: center;"
+          role="group"
+          aria-label="Contact actions"
+        >
+          <a
+            href="mailto:jose.quintana@utp.edu.co"
+            class="button"
+          >
+            <i
+              class="fas fa-envelope"
+              aria-hidden="true"
+            ></i>
+            Email me
+          </a>
+
+          <a
+            href="https://linkedin.com/in/ingjosequintana"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button--secondary"
+          >
+            <i
+              class="fab fa-linkedin-in"
+              aria-hidden="true"
+            ></i>
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/JoseQuintana20"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button--secondary"
+          >
+            <i
+              class="fab fa-github"
+              aria-hidden="true"
+            ></i>
+            GitHub
+          </a>
+        </div>
       </div>
     </section>
-    </main>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
-      <p>&copy; 2024 Jose Quintana. All Rights Reserved.</p>
+      <p>
+        &copy;
+        <span id="current-year"></span>
+        José Daniel Quintana Fuentes. All rights reserved.
+      </p>
+
       <div class="footer-social-icons">
-        <ul class="social-icons">
+        <ul
+          class="social-icons"
+          aria-label="Contact links"
+        >
           <li>
-            <a href="mailto:jose.quintana@utp.edu.co" target="_blank" aria-label="Email">
-              <i class="fas fa-envelope"></i>
+            <a
+              href="mailto:jose.quintana@utp.edu.co"
+              aria-label="Email"
+              title="Email"
+            >
+              <i
+                class="fas fa-envelope"
+                aria-hidden="true"
+              ></i>
             </a>
           </li>
+
           <li>
-            <a href="https://instagram.com/josequintanana" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
+            <a
+              href="https://github.com/JoseQuintana20"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <i
+                class="fab fa-github"
+                aria-hidden="true"
+              ></i>
             </a>
           </li>
+
           <li>
-            <a href="https://github.com/JoseQuintana20" target="_blank" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/ingjosequintana" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
+            <a
+              href="https://linkedin.com/in/ingjosequintana"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <i
+                class="fab fa-linkedin-in"
+                aria-hidden="true"
+              ></i>
             </a>
           </li>
         </ul>
@@ -589,18 +1283,15 @@
     </div>
   </footer>
 
+  <noscript>
+    This portfolio uses JavaScript for the mobile menu, theme switch,
+    section highlighting and navigation utilities.
+  </noscript>
 
-  <!-- Mobile Menu Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuButton = document.querySelector('.menu-button');
-      const menuItems = document.querySelector('.menu-items');
-  
-      menuButton.addEventListener('click', function () {
-        menuItems.classList.toggle('active');
-      });
-    });
-  </script>
+  <script
+    src="js/main.js"
+    defer
+  ></script>
 </body>
 
 </html>
