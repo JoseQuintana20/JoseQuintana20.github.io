@@ -1,218 +1,227 @@
-/*************************************************************************
- * Improved and Enhanced CSS for Controls
- * Version: Updated
- * Enhancements for Aesthetic and Usability
- *************************************************************************/
+/* ==========================================================================
+   controls.css
+   Buttons, interactive links, inputs and focus states
+   ========================================================================== */
 
-/* General Button Styles */
-.custom-button {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  padding: 12px 25px;
-  text-align: center;
-  font-size: 15px;
-  line-height: 1.5;
-  outline: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: white;
-  border: 1px solid #7d7d7d;
-  background-color: #7d7d7d;
+:where(button, .button, .custom-button, .github-link) {
+  -webkit-tap-highlight-color: transparent;
 }
 
-.custom-button:hover {
-  background-color: #4d4d4d;
-  border-color: #4d4d4d;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
+button {
+  border: 0;
 }
 
-.custom-button:active {
-  background-color: #3c3c3c;
-  border-color: #3c3c3c;
-  transform: translateY(1px);
-}
-
-.custom-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  background-color: #cccccc;
-  border-color: #aaaaaa;
-}
-
-/* Primary Button */
-.custom-button-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.custom-button-primary:hover {
-  background-color: #005cbf;
-  border-color: #005cbf;
-}
-
-.custom-button-primary:active {
-  background-color: #0049a1;
-  border-color: #0049a1;
-}
-
-/* Danger Button */
-.custom-button-danger {
-  background-color: #dc3545;
-  border-color: #dc3545;
-}
-
-.custom-button-danger:hover {
-  background-color: #b92a37;
-  border-color: #b92a37;
-}
-
-/* Info Button */
-.custom-button-info {
-  background-color: #17a2b8;
-  border-color: #17a2b8;
-}
-
-.custom-button-info:hover {
-  background-color: #127a90;
-  border-color: #127a90;
-}
-
-/* Flat Button Style */
-.custom-button-flat {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  text-align: center;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 50px;
-  background-color: #ffffff;
-  color: #333333;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.custom-button-flat:hover {
-  background-color: #f2f2f2;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-}
-
-.custom-button-flat:active {
-  background-color: #e6e6e6;
-  transform: translateY(1px);
-}
-
-/* Icon Buttons */
-.custom-icon-button {
+.button,
+.custom-button,
+.github-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  gap: 0.55rem;
+  min-height: 2.7rem;
+  padding: 0.68rem 1rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  background: var(--color-accent);
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
 }
 
-.custom-icon-button i {
-  margin-right: 8px;
-  font-size: 18px;
+.button:hover,
+.custom-button:hover,
+.github-link:hover {
+  color: #ffffff;
+  background: var(--color-accent-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-0.12rem);
 }
 
-.custom-icon-button-primary {
-  background-color: #007bff;
-  color: white;
+.button:active,
+.custom-button:active,
+.github-link:active {
+  transform: translateY(0);
 }
 
-.custom-icon-button-primary:hover {
-  background-color: #005cbf;
+.button--secondary,
+.custom-button-flat {
+  color: var(--color-text);
+  background: var(--color-surface-2);
+  border-color: var(--color-border);
 }
 
-/* Input Styles */
+.button--secondary:hover,
+.custom-button-flat:hover {
+  color: var(--color-accent);
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-strong);
+}
+
+.button--small {
+  min-height: 2.3rem;
+  padding: 0.52rem 0.82rem;
+  font-size: 0.9rem;
+}
+
+button:disabled,
+.button[aria-disabled="true"],
+.custom-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Header controls */
+.theme-toggle,
+.menu-button,
+.scroll-to-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  padding: 0;
+  color: var(--color-text);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.theme-toggle:hover,
+.menu-button:hover,
+.scroll-to-top:hover {
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  border-color: var(--color-border-strong);
+  box-shadow: 0 0 0 0.28rem var(--color-accent-soft);
+  transform: scale(1.045);
+}
+
+.theme-toggle:active,
+.menu-button:active,
+.scroll-to-top:active {
+  transform: scale(0.97);
+}
+
+.theme-toggle i,
+.menu-button i,
+.scroll-to-top i {
+  pointer-events: none;
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 900;
+  color: #ffffff;
+  background: var(--color-accent);
+  border-color: transparent;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0.75rem);
+  pointer-events: none;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-to-top:hover {
+  color: #ffffff;
+  background: var(--color-accent-strong);
+  transform: translateY(-0.15rem);
+}
+
+/* Form controls */
 input.custom-textbox,
-textarea.custom-textbox {
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-  box-sizing: border-box;
-  padding: 10px 15px;
-  background: #ffffff;
-  border: 1px solid #cccccc;
-  font-size: 16px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+textarea.custom-textbox,
+select.custom-textbox {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  color: var(--color-text);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+input.custom-textbox::placeholder,
+textarea.custom-textbox::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.8;
 }
 
 input.custom-textbox:focus,
-textarea.custom-textbox:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+textarea.custom-textbox:focus,
+select.custom-textbox:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 0.25rem var(--color-accent-soft);
 }
 
-/* Disabled Input */
-input.custom-textbox:disabled,
-textarea.custom-textbox:disabled {
-  background: #f2f2f2;
-  border-color: #dddddd;
-  cursor: not-allowed;
+textarea.custom-textbox {
+  min-height: 8rem;
+  resize: vertical;
 }
 
-/* Control Groups */
 .control-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 0.75rem;
 }
 
-.control-group .custom-button,
-.control-group .custom-textbox {
-  margin-bottom: 10px;
+/* Accessible focus */
+:where(
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  [tabindex]:not([tabindex="-1"])
+):focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
+@media (max-width: 36rem) {
   .control-group {
     flex-direction: column;
-    align-items: stretch;
   }
 
-  .custom-button {
+  .control-group > * {
     width: 100%;
   }
-}
 
-/* Pulse Animations */
-.pulse {
-  animation: pulse-animation 2s infinite;
-}
-
-@keyframes pulse-animation {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+  .theme-toggle,
+  .menu-button {
+    width: 2.5rem;
+    height: 2.5rem;
   }
-  70% {
-    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
-  }
-}
-
-.pulse-primary {
-  box-shadow: 0 0 0 rgba(0, 123, 255, 0.5);
-}
-
-.pulse-danger {
-  box-shadow: 0 0 0 rgba(220, 53, 69, 0.5);
-}
-
-.pulse-info {
-  box-shadow: 0 0 0 rgba(23, 162, 184, 0.5);
-}
-
-/* Accessibility Improvements */
-:focus {
-  outline: 2px dashed #005cbf;
-  outline-offset: 3px;
 }
